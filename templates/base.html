@@ -12,6 +12,7 @@
 
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -33,7 +34,7 @@
         <div class="row">
             <div class="col-12 col-lg-4 my-auto py-1 text-center text-md-left">
                 <a href="{ url 'home' }">
-                    <h4 class="text-success">PREMIUMBODY</h4>
+                    <h4 class="font-logo text-uppercase">Premiumbody</h4>
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1">
