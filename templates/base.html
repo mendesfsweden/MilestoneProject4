@@ -29,7 +29,60 @@
     <title>PREMIUMBODY</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top"></header>
+    <header class="container-fluid fixed-top">
+        <div class="row">
+            <div class="col-12 col-lg-4 my-auto py-1 text-center text-md-left">
+                <a href="{ url 'home' }">
+                    <h4 class="text-success">PREMIUMBODY</h4>
+                </a>
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1">
+                <ul class="list-inline list-unstyled text-center">
+                   <li class="list-inline-item">
+                        <a href="">Home</a>
+                    </li>
+                     <li class="list-inline-item">
+                        <a href="">Products</a>
+                    </li>
+                     <li class="list-inline-item">
+                        <a href="">Contact</a>
+                    </li>
+                    {% if request.user.is_authenticated %}
+                        <li class="list-inline-item">
+                            <a href="">Logout</a>
+                        </li>
+                            {% if request.user.is_superuser %}
+                                <li class="list-inline-item">
+                                    <a href="">Management - Logout</a>
+                                </li>
+                            {% endif %}        
+                    {% else %}
+                        <li class="list-inline-item">
+                            <a href="{% url 'account_signup' %}">Register</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="{% url 'account_login' %}">Login</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="col-12 col-lg-4 my-auto text-center">
+                <a href="">
+                    Cart 
+                    <span class="badge badge-primary badge-pill">2</span>
+                    <span>|</span>
+                    <span class="my-0">
+                        {% if grand_total %}
+                            ${{ grand_total|floatformat:2 }}
+                        {% else %}
+                            $0.00
+                        {% endif %}
+                    </span>
+                </a>
+            </div>
+        </div>
+
+    </header>
 
     {% if messages %}
         <div class="container-messages"></div>
