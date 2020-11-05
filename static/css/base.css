@@ -13,10 +13,11 @@
 }
 
 .start-shop-btn {
-    background: white;
-    color: black;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
     margin-top: 300px;
-    margin-left: 10%;
+    margin-left: 15%;
 }
 
 .section-title {
@@ -38,4 +39,19 @@
 
 a:hover {
     text-decoration: none;
+}
+
+.social-media {
+    background: black;
+    height: 100px;
+}
+
+.social-links {
+    color: #fafafa;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.social-links:hover {
+    color: #C0B01F;
 }

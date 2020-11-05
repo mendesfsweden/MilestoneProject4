@@ -12,6 +12,7 @@
 
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -32,7 +33,7 @@
   <body>
     <header class="container-fluid fixed-top">
         <div class="row bg-header">
-            <div class="col-12 col-lg-4 my-auto py-1 text-center text-md-left">
+            <div class="col-12 col-lg-4 my-auto py-1 text-center text-lg-left">
                 <a href="{ url 'home' }">
                     <h4 class="logo-font text-uppercase pt-3">Premiumbody</h4>
                 </a>
@@ -67,20 +68,22 @@
                     {% endif %}
                 </ul>
             </div>
-            <div class="col-12 col-lg-4 my-auto text-center text-md-right">
-                <a href="" class="main-font">
-                    Cart 
-                    <span class="badge badge-dark badge-pill main-font" >2</span>
-                    <span>|</span>
-                    <span class="my-0 main-font">
-                        {% if grand_total %}
-                            ${{ grand_total|floatformat:2 }}
-                        {% else %}
-                            $0.00
-                        {% endif %}
-                    </span>
-                </a>
-            </div>
+            {% if request.user.is_authenticated %}
+                <div class="col-12 col-lg-4 my-auto text-center text-lg-right">
+                    <a href="" class="main-font">
+                        Cart 
+                        <span class="badge badge-dark badge-pill main-font" >2</span>
+                        <span>|</span>
+                        <span class="my-0 main-font">
+                            {% if grand_total %}
+                                ${{ grand_total|floatformat:2 }}
+                            {% else %}
+                                $0.00
+                            {% endif %}
+                        </span>
+                    </a>
+                </div>
+            {% endif %}
         </div>
 
     </header>
@@ -94,6 +97,29 @@
 
     {% block content %}
     {% endblock %}
+
+    <div class="social-media text-center">
+        <ul class="list-inline pt-4">
+            <li class="list-inline-item">
+                <a class="social-links" target="_blank" href="https://www.facebook.com/">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <span class="sr-only">Facebook</span>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="social-links" target="_blank" href="https://www.linkedin.com/">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    <span class="sr-only">LinkedIn</span>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="social-links" target="_blank" href="https://www.instagram.com/">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <span class="sr-only">Instagram</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 
     {% block postloadjs %}
     {% endblock %}
