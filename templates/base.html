@@ -31,48 +31,48 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div class="row">
+        <div class="row bg-header">
             <div class="col-12 col-lg-4 my-auto py-1 text-center text-md-left">
                 <a href="{ url 'home' }">
-                    <h4 class="font-logo text-uppercase">Premiumbody</h4>
+                    <h4 class="logo-font text-uppercase pt-3">Premiumbody</h4>
                 </a>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1">
-                <ul class="list-inline list-unstyled text-center">
+            <div class="col-12 col-lg-4 my-auto">
+                <ul class="list-inline list-unstyled text-center pt-3">
                    <li class="list-inline-item">
-                        <a href="">Home</a>
+                        <a href="" class="main-font">Home</a>
                     </li>
                      <li class="list-inline-item">
-                        <a href="">Products</a>
+                        <a href="" class="main-font">Products</a>
                     </li>
                      <li class="list-inline-item">
-                        <a href="">Contact</a>
+                        <a href="" class="main-font">Contact</a>
                     </li>
                     {% if request.user.is_authenticated %}
                         <li class="list-inline-item">
-                            <a href="">Logout</a>
+                            <a href="" class="main-font">Logout</a>
                         </li>
                             {% if request.user.is_superuser %}
                                 <li class="list-inline-item">
-                                    <a href="">Management - Logout</a>
+                                    <a href="" class="main-font">Management - Logout</a>
                                 </li>
                             {% endif %}        
                     {% else %}
                         <li class="list-inline-item">
-                            <a href="{% url 'account_signup' %}">Register</a>
+                            <a href="{% url 'account_signup' %}" class="main-font">Register</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="{% url 'account_login' %}">Login</a>
+                            <a href="{% url 'account_login' %}" class="main-font">Login</a>
                         </li>
                     {% endif %}
                 </ul>
             </div>
-            <div class="col-12 col-lg-4 my-auto text-center">
-                <a href="">
+            <div class="col-12 col-lg-4 my-auto text-center text-md-right">
+                <a href="" class="main-font">
                     Cart 
-                    <span class="badge badge-primary badge-pill">2</span>
+                    <span class="badge badge-dark badge-pill main-font" >2</span>
                     <span>|</span>
-                    <span class="my-0">
+                    <span class="my-0 main-font">
                         {% if grand_total %}
                             ${{ grand_total|floatformat:2 }}
                         {% else %}

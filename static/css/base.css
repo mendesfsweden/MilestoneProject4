@@ -1,11 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Black+Ops+One&display=swap');
 
 .container-home {
-    background: url('media/Home_image.jpg') no-repeat center center fixed;
+    background: url('/media/Home_image.jpg') no-repeat center center fixed;
+    height: 600px;
+}
+
+.logo-font,
+.main-font,
+.start-shop-btn {
+    font-family: "Black Ops One", sans-serif;
+    color: white;
+}
+
+.start-shop-btn {
+    background: white;
+    color: black;
+    margin-top: 300px;
+    margin-left: 10%;
+}
+
+.section-title {
+    color: black;
 }
 
 .logo-font {
-    font-family: "Black Ops One", sans-serif;
     font-size: 26px;
     color: #C0B01F;
+}
+
+.header-container {
+    padding-top: 50px;
+}
+
+.bg-header {
+    background-color: black;
+}
+
+a:hover {
+    text-decoration: none;
 }
