@@ -17,43 +17,65 @@
             </div>
         </div>
         <div class="row">
-            <div class="product-container col-10 offset-1">
+            <div class="col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
-                <div class="row">
-                    {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
-                                {% if product.image %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
-                                {% else %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class="mb-0"><strong>{{ product.name }}</strong></p>
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="lead mb-0 text-left">€{{ product.price }}</p>
-                                            <small class="text-muted">{{ product.rating }} / <strong>10</strong></small>
-                                        </div>
+                    <div class="row">
+                        {% for product in products %}
+                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                                <div class="card h-100 border-0 pb-3 pt-3">
+                                    {% if product.image %}
+                                    <a href="">
+                                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    </a>
+                                    {% endif %}
+                                    <div class="card-body pb-0">
+                                        <p class="mb-0"><strong>{{ product.name }}</strong></p>
                                     </div>
-                                    <div class="row text-right">
-                                        <div class="col">
-                                            {% if request.user.is_authenticated %}
-                                                <a href="" class="buy-btn btn text-uppercase">Buy</a>
-                                            {% else %}
-                                                <a href="{% url 'account_login' %}" class="buy-btn btn text-uppercase">Buy</a>
-                                            {% endif %}
+                                    <div class="card-footer bg-white pt-0 border-0 text-left">
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="lead mb-0 text-left">€{{ product.price }}</p>
+                                                <small class="text-muted">{{ product.rating }} / <strong>10</strong></small>
+                                            </div>
+                                        </div>
+                                        <div class="row text-right">
+                                            <div class="col">
+                                                {% if request.user.is_authenticated %}
+                                                    {% if request.user.is_superuser %}
+                                                        <a href="" class="buy-btn btn text-uppercase">Edit</a>
+                                                    {% endif %}
+                                                {% else %}
+                                                    <a href="{% url 'account_login' %}" class="buy-btn btn text-uppercase">Buy</a>
+                                                {% endif %}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        {% if forloop.counter|divisibleby:1 %}
+                            <div class="col-12 d-sm-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}                        
+                        {% if forloop.counter|divisibleby:2 %}
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:3 %}
+                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:4 %}
+                            <div class="col-12 d-none d-xl-block mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
                     {% endfor %}               
                 </div>
             </div>
