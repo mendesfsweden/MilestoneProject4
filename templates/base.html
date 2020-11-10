@@ -38,49 +38,49 @@
             </div>            
         </div>
         <div class="row bg-header">
-            <div class="col-12 col-lg-4 my-auto py-1 text-center text-lg-left d-none d-md-block d-xl-block">
-                <a href="{ url 'home' }" class="logo-font text-uppercase pt-3">
+            <div class="col-12 col-lg-4 my-auto py-1 text-center text-lg-left">
+                <a href="{ url 'home' }" class="logo-font logo text-uppercase pt-3">
                  Premiumbody
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto">
                 <ul class="list-inline list-unstyled text-center pt-3">
                    <li class="list-inline-item">
-                        <a href="" class="main-font itm-color">Home</a>
+                        <a href="" class="main-font itm-color nav-itm">Home</a>
                     </li>
                      <li class="list-inline-item">
-                        <a href="" class="main-font itm-color">Products</a>
+                        <a href="" class="main-font itm-color nav-itm">Products</a>
                     </li>
                      <li class="list-inline-item">
-                        <a href="" class="main-font itm-color">Contact</a>
+                        <a href="" class="main-font itm-color nav-itm">Contact</a>
                     </li>
                     {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                                 <li class="list-inline-item">
-                                    <a href="" class="main-font itm-color">Management - Logout</a>
+                                    <a href="" class="main-font itm-color nav-itm">Management - Logout</a>
                                 </li>
                             {% else %}
                                 <li class="list-inline-item">
-                                    <a href="" class="main-font itm-color">Logout</a>
+                                    <a href="" class="main-font itm-color nav-itm">Logout</a>
                                 </li> 
                             {% endif %}
                     {% else %}
                         <li class="list-inline-item">
-                            <a href="{% url 'account_signup' %}" class="main-font itm-color">Register</a>
+                            <a href="{% url 'account_signup' %}" class="main-font itm-color nav-itm">Register</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="{% url 'account_login' %}" class="main-font itm-color">Login</a>
+                            <a href="{% url 'account_login' %}" class="main-font itm-color nav-itm">Login</a>
                         </li>
                     {% endif %}
                 </ul>
             </div>
             {% if request.user.is_authenticated %}
                 <div class="col-12 col-lg-4 my-auto text-center text-lg-right">
-                    <a href="" class="main-font">
+                    <a href="" class="main-font nav-itm">
                         Cart 
-                        <span class="badge badge-dark badge-pill main-font" >2</span>
+                        <span class="badge badge-dark badge-pill main-font nav-itm">2</span>
                         <span>|</span>
-                        <span class="my-0 main-font">
+                        <span class="my-0 main-font nav-itm">
                             {% if grand_total %}
                                 ${{ grand_total|floatformat:2 }}
                             {% else %}
