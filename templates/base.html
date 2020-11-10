@@ -32,6 +32,11 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
+     <div id="delivery-banner" class="row text-center delivery-banner">
+            <div class="col">
+                <h4 class="delivery-banner-txt my-1">Free delivery on orders over ${{ free_shipping_threshold }}!</h4>                
+            </div>            
+        </div>
         <div class="row bg-header">
             <div class="col-12 col-lg-4 my-auto py-1 text-center text-lg-left">
                 <a href="{ url 'home' }" class="logo-font text-uppercase pt-3">
@@ -41,29 +46,29 @@
             <div class="col-12 col-lg-4 my-auto">
                 <ul class="list-inline list-unstyled text-center pt-3">
                    <li class="list-inline-item">
-                        <a href="" class="main-font">Home</a>
+                        <a href="" class="main-font itm-color">Home</a>
                     </li>
                      <li class="list-inline-item">
-                        <a href="" class="main-font">Products</a>
+                        <a href="" class="main-font itm-color">Products</a>
                     </li>
                      <li class="list-inline-item">
-                        <a href="" class="main-font">Contact</a>
+                        <a href="" class="main-font itm-color">Contact</a>
                     </li>
                     {% if request.user.is_authenticated %}
                         <li class="list-inline-item">
-                            <a href="" class="main-font">Logout</a>
+                            <a href="" class="main-font itm-color">Logout</a>
                         </li>
                             {% if request.user.is_superuser %}
                                 <li class="list-inline-item">
-                                    <a href="" class="main-font">Management - Logout</a>
+                                    <a href="" class="main-font itm-color">Management - Logout</a>
                                 </li>
                             {% endif %}        
                     {% else %}
                         <li class="list-inline-item">
-                            <a href="{% url 'account_signup' %}" class="main-font">Register</a>
+                            <a href="{% url 'account_signup' %}" class="main-font itm-color">Register</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="{% url 'account_login' %}" class="main-font">Login</a>
+                            <a href="{% url 'account_login' %}" class="main-font itm-color">Login</a>
                         </li>
                     {% endif %}
                 </ul>
@@ -85,7 +90,7 @@
                 </div>
             {% endif %}
         </div>
-
+       
     </header>
 
     {% if messages %}

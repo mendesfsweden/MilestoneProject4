@@ -52,6 +52,19 @@ a:hover {
     font-size: 30px;
 }
 
-.social-links:hover {
+.social-links:hover,
+.itm-color:hover,
+.start-shop-btn:hover {
     color: #C0B01F;
 }
+
+.delivery-banner {
+    background: #C0B01F;
+}
+
+.delivery-banner-txt {
+    font-family: "Black Ops One", sans-serif;
+    color: black;
+    font-size: 16px;
+}
+
