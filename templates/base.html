@@ -39,17 +39,17 @@
         </div>
         <div class="row bg-header">
             <div class="col-12 col-lg-4 my-auto py-1 text-center text-lg-left">
-                <a href="{ url 'home' }" class="logo-font logo text-uppercase pt-3">
+                <a href="{% url 'home' %}" class="logo-font logo text-uppercase pt-3">
                  Premiumbody
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto">
                 <ul class="list-inline list-unstyled text-center pt-3">
                    <li class="list-inline-item">
-                        <a href="" class="main-font itm-color nav-itm">Home</a>
+                        <a href="{% url 'home' %}" class="main-font itm-color nav-itm">Home</a>
                     </li>
                      <li class="list-inline-item">
-                        <a href="" class="main-font itm-color nav-itm">Products</a>
+                        <a href="{% url 'products' %}" class="main-font itm-color nav-itm">Products</a>
                     </li>
                      <li class="list-inline-item">
                         <a href="" class="main-font itm-color nav-itm">Contact</a>
