@@ -1,0 +1,42 @@
+[
+   {
+      "pk":1,
+      "model":"products.category",
+      "fields":{
+         "name":"protein",
+         "friendly_name":"Protein"
+      }
+   },
+   {
+      "pk":2,
+      "model":"products.category",
+      "fields":{
+         "name":"mass_gainers",
+         "friendly_name":"Mass Gainers"
+      }
+   },
+   {
+      "pk":3,
+      "model":"products.category",
+      "fields":{
+         "name":"bcaa",
+         "friendly_name":"Bcaa's"
+      }
+   },
+   {
+      "pk":4,
+      "model":"products.category",
+      "fields":{
+         "name":"creatine",
+         "friendly_name":"Creatine"
+      }
+   },
+   {
+      "pk":5,
+      "model":"products.category",
+      "fields":{
+         "name":"pre_workout",
+         "friendly_name":"Pre Workout"
+      }
+   }
+]

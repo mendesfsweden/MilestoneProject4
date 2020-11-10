@@ -55,14 +55,15 @@
                         <a href="" class="main-font itm-color">Contact</a>
                     </li>
                     {% if request.user.is_authenticated %}
-                        <li class="list-inline-item">
-                            <a href="" class="main-font itm-color">Logout</a>
-                        </li>
                             {% if request.user.is_superuser %}
                                 <li class="list-inline-item">
                                     <a href="" class="main-font itm-color">Management - Logout</a>
                                 </li>
-                            {% endif %}        
+                            {% else %}
+                                <li class="list-inline-item">
+                                    <a href="" class="main-font itm-color">Logout</a>
+                                </li> 
+                            {% endif %}
                     {% else %}
                         <li class="list-inline-item">
                             <a href="{% url 'account_signup' %}" class="main-font itm-color">Register</a>

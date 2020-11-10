@@ -1,0 +1,72 @@
+[
+   {
+      "pk":1,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5001340155",
+         "name":"Total Whey",
+         "description":"With a low fat content and few carbohydrates, Total Whey contains a high content of concentrated whey isolates. To improve its formula, we added a complex of digestive enzymes and a patented symbiotic – Lactowise ® – with probiotic and prebiotic ingredients, which contributes to intestinal health. The combination of these two ingredients enhances the absorption of nutrients and enhances the already known benefits of whey protein in improving body composition.",
+         "price":55.99,
+         "category":1,
+         "rating":8.9,
+         "image_url":"https://goldnutrition.pt/wp-content/uploads/2018/08/TotalWhey2kg-ChocoBranco.jpg",
+         "image":"gold_total_whey.jpg"
+      }
+   },
+   {
+      "pk":2,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5001600425",
+         "name":"BCAA 180",
+         "description":"Not everyone likes or can drink protein shakes, but it doesn’t mean that because of this we cannot improve our performance and recovery. BCAAs contribute to the process of muscle building and recovery, reduced tiredness and fatigue, and increases physical performance.",
+         "price":12.99,
+         "category":3,
+         "rating":9.2,
+         "image_url":"https://goldnutrition.pt/wp-content/uploads/2018/08/BCAA-180.jpg",
+         "image":"bcaa_180.jpg"
+      }
+   },
+   {
+      "pk":3,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5001730010",
+         "name":"Creatine Powder",
+         "description":"Want to increase your sprint strength and power? Improve your physical performance during repeated, short-duration, high-intensity exercises. This is the ideal supplement for workouts that require quick and short power surges, such as football, handball, rugby, basketball, hockey or speed.",
+         "price":15.99,
+         "category":4,
+         "rating":9.0,
+         "image_url":"https://goldnutrition.pt/wp-content/uploads/2018/08/CreatinePowder.jpg",
+         "image":"creatine_powder_280.jpg"
+      }
+   },
+   {
+      "pk":4,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5001890157",
+         "name":"Supreme Gainers",
+         "description":"Do you have a hard time in gaining weight? If this is your goal but at the same time you want to gain muscle mass, we present you Supreme Gainers.",
+         "price":43.99,
+         "category":2,
+         "rating":9.5,
+         "image_url":"https://goldnutrition.pt/wp-content/uploads/2018/11/GN-SupremeGainers.jpg",
+         "image":"supreme_gainers.jpg"
+      }
+   },
+   {
+      "pk":5,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5002111605",
+         "name":"Pre Workout Explosive",
+         "description":"Pre-Workout Explosive helps you achieve goals by improving muscle power and metabolism during training and delaying fatigue.",
+         "price":36.50,
+         "category":5,
+         "rating":8.5,
+         "image_url":"https://goldnutrition.pt/wp-content/uploads/2019/09/GN-PreWorkoutExplosive.jpg",
+         "image":"pre_workout_explosive.jpg"
+      }
+   }
+]
