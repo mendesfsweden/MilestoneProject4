@@ -44,6 +44,11 @@
     font-family: "Black Ops One", sans-serif;
 }
 
+.cat-btn {
+    font-family: "Black Ops One", sans-serif;
+    border: 2px solid black;
+}
+
 .section-title {
     color: black;
 }
@@ -95,6 +100,12 @@ a:hover {
 .itm-color:hover,
 .start-shop-btn:hover {
     color: #C0B01F;
+}
+
+.cat-btn:hover {
+    border: 2px solid white;
+    color: white;
+    background-color: black;
 }
 
 
