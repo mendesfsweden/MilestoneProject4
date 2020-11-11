@@ -12,9 +12,23 @@
 {% block content %}
     <div class="container container-main">
         <div class="row">
-            <div class="col text-center">
+            <div class="col text-center pb-2">
                 <h2 class="products-title">Products</h2>
             </div>
+        </div>
+        <div class="col-12 col-lg-4 offset-lg-4 my-auto py-1 py-lg-0">
+            <form method="GET" action="">
+                <div class="input-group w-100">
+                    <input class="form-control" type="text" name="q" placeholder="What are looking for?">
+                    <div class="input-group-append">
+                        <button class="form-control btn border border-black rounded-0" type="submit">
+                            <span class="icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
         <div class="row">
             <div class="col-10 offset-1">
