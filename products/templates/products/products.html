@@ -85,9 +85,9 @@
                                     <div class="card-footer bg-white pt-0 border-0 text-left">
                                         <div class="row">
                                             <div class="col">
-                                                <p class="lead mb-0 text-left">€{{ product.price }}</p>
+                                                <p class=" mb-0 text-left">€{{ product.price }}</p>
                                                 {% if product.rating %}
-                                                    <small class="text-muted">{{ product.rating }} / <strong>10</strong></small>
+                                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / <strong>10</strong></small>
                                                 {% else %}
                                                     <small class="text-muted">No Rating</small>
                                                 {% endif %}
