@@ -22,13 +22,13 @@
                     <div class="row">
                         {% for product in products %}
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                                <div class="card h-100 border-0 pb-3 pt-3">
+                                <div class="card h-100 border-0 pb-3 pt-3 pr-2">
                                     {% if product.image %}
-                                    <a href="">
+                                    <a href="{% url 'detailed_product' product.id %}">
                                         <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                     </a>
                                     {% else %}
-                                    <a href="">
+                                    <a href="{% url 'detailed_product' product.id %}">
                                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                     </a>
                                     {% endif %}
@@ -39,7 +39,11 @@
                                         <div class="row">
                                             <div class="col">
                                                 <p class="lead mb-0 text-left">€{{ product.price }}</p>
-                                                <small class="text-muted">{{ product.rating }} / <strong>10</strong></small>
+                                                {% if product.rating %}
+                                                    <small class="text-muted">{{ product.rating }} / <strong>10</strong></small>
+                                                {% else %}
+                                                    <small class="text-muted">No Rating</small>
+                                                {% endif %}
                                             </div>
                                         </div>
                                         <div class="row text-right">
@@ -79,6 +83,9 @@
                     {% endfor %}               
                 </div>
             </div>
+        </div>
+        <div class="text-center pb-3">
+            <a href="">Next Page</a><span>    |     </span><a href="">Previous Page</a>
         </div>
     </div>
 {% endblock %}
