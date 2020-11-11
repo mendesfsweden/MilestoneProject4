@@ -19,7 +19,7 @@
 }
 
 .nav-itm {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .products-title {
@@ -113,12 +113,12 @@ a:hover {
 
 @media (max-width: 992px) {
     .header-container {
-        padding-top: 150px;
+        padding-top: 130px;
     }
 }
 
 @media (max-width: 768px) {
     .header-container {
-        padding-top: 150px;
+        padding-top: 130px;
     }
 }
