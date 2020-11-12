@@ -96,9 +96,7 @@
                                         <div class="row text-right">
                                             <div class="col">
                                                 {% if request.user.is_authenticated %}
-                                                    {% if request.user.is_superuser %}
-                                                        <a href="" class="buy-btn btn">Edit</a>
-                                                    {% endif %}
+                                                    <a href="" class="buy-btn btn">Buy</a>
                                                 {% else %}
                                                     <a href="{% url 'account_login' %}" class="buy-btn btn">Buy</a>
                                                 {% endif %}

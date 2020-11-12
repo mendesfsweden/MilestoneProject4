@@ -56,15 +56,9 @@
                         <a href="" class="main-font itm-color nav-itm">Contact</a>
                     </li>
                     {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                                <li class="list-inline-item">
-                                    <a href="" class="main-font itm-color nav-itm">Management - Logout</a>
-                                </li>
-                            {% else %}
-                                <li class="list-inline-item">
-                                    <a href="" class="main-font itm-color nav-itm">Logout</a>
-                                </li> 
-                            {% endif %}
+                        <li class="list-inline-item">
+                            <a href="" class="main-font itm-color nav-itm">Logout</a>
+                        </li> 
                     {% else %}
                         <li class="list-inline-item">
                             <a href="{% url 'account_signup' %}" class="main-font itm-color nav-itm">Register</a>
