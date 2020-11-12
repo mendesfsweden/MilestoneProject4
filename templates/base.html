@@ -39,13 +39,13 @@
             </div>            
         </div>
         <div class="row bg-header">
-            <div class="col-12 col-lg-4 my-auto py-1 text-center text-lg-left">
+            <div class="col-12 col-md-4 my-auto py-1 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="logo-font logo text-uppercase pt-3">
                  Premiumbody
                 </a>
             </div>
-            <div class="col-12 col-lg-4 my-auto">
-                <ul class="list-inline list-unstyled text-center pt-3">
+            <div class="col-6 col-md-4 my-auto">
+                <ul class="list-inline list-unstyled text-center pt-3 d-none d-md-block">
                    <li class="list-inline-item">
                         <a href="{% url 'home' %}" class="main-font itm-color nav-itm">Home</a>
                     </li>
@@ -68,9 +68,27 @@
                         </li>
                     {% endif %}
                 </ul>
-            </div>
+                <div class="col-6 col-md-4 d-md-none justify-content-center">
+                    <div class="dropdown">
+                        <button class="navbar-toggler navbar-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item dropdown-itm" href="{% url 'home' %}">Home</a>
+                            <a class="dropdown-item dropdown-itm" href="{% url 'products' %}">Products</a>
+                            <a class="dropdown-item dropdown-itm" href="#">Contact</a>
+                            {% if request.user.is_authenticated %}
+                                <a class="dropdown-item dropdown-itm" href="#">Logout</a>
+                            {% else %}
+                                <a class="dropdown-item dropdown-itm" href="{% url 'account_signup' %}">Register</a>
+                                <a class="dropdown-item dropdown-itm" href="{% url 'account_login' %}">Login</a>
+                            {% endif %}
+                        </div>
+                        </div>
+                    </div>
+                </div>
             {% if request.user.is_authenticated %}
-                <div class="col-12 col-lg-4 my-auto text-center text-lg-right">
+                <div class="col-6 col-md-4 my-auto text-right">
                     <a href="{% url 'view_cart' %}" class="main-font nav-itm">
                         Cart 
                         <span class="badge badge-dark badge-pill main-font nav-itm">2</span>
