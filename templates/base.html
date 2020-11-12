@@ -71,7 +71,7 @@
             </div>
             {% if request.user.is_authenticated %}
                 <div class="col-12 col-lg-4 my-auto text-center text-lg-right">
-                    <a href="" class="main-font nav-itm">
+                    <a href="{% url 'view_cart' %}" class="main-font nav-itm">
                         Cart 
                         <span class="badge badge-dark badge-pill main-font nav-itm">2</span>
                         <span>|</span>
