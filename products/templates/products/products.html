@@ -93,12 +93,12 @@
                                                 {% endif %}
                                             </div>
                                         </div>
-                                        <div class="row text-right">
+                                        <div class="row text-center">
                                             <div class="col">
                                                 {% if request.user.is_authenticated %}
-                                                    <a href="" class="buy-btn btn">Buy</a>
+                                                    <a href="" class="buy-btn btn text-uppercase mt-4">Add to cart</a>
                                                 {% else %}
-                                                    <a href="{% url 'account_login' %}" class="buy-btn btn">Buy</a>
+                                                    <a href="{% url 'account_login' %}" class="buy-btn btn text-uppercase">add to cart</a>
                                                 {% endif %}
                                             </div>
                                         </div>
