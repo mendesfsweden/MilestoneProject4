@@ -91,7 +91,13 @@
                 <div class="col-6 col-md-4 my-auto text-right">
                     <a href="{% url 'view_cart' %}" class="main-font nav-itm">
                         Cart 
-                        <span class="badge badge-dark badge-pill main-font nav-itm">2</span>
+                        <span class="badge badge-dark badge-pill main-font nav-itm">
+                            {% if product_count %}
+                                {{ product_count }}
+                            {% else %}
+                                0
+                            {% endif %}
+                        </span>
                         <span>|</span>
                         <span class="my-0 main-font nav-itm">
                             {% if grand_total %}
