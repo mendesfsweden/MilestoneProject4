@@ -67,7 +67,7 @@
             <div class="col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
                     <div class="row">
-                        {% for product in products %}
+                        {% for product in page_obj %}
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                                 <div class="card h-100 border-0 pb-3 pt-3 pr-2">
                                     {% if product.image %}
@@ -130,7 +130,21 @@
             </div>
         </div>
         <div class="text-center pb-3">
-            <a href="">Next Page</a><span>    |     </span><a href="">Previous Page</a>
+            <span>
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">&laquo; first</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                {% endif %}
+
+                <span>
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                </span>
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                {% endif %}
+            </span>
         </div>
-    </div>
+        
 {% endblock %}
