@@ -1,13 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Black+Ops+One&display=swap');
 
+body {
+    min-height: 100vh; 
+    margin: 0; 
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 .container-home {
     background: url('/media/Home_image.jpg') no-repeat center center fixed;
     height: 600px;
 }
 
 .container-main {
-    min-height: 300px;
     padding-top: 40px;
+}
+
+.footer {
+    min-height:50px;
 }
 
 .logo-font,
