@@ -1,0 +1,25 @@
+<div class="col-md-4 my-auto d-none d-md-block">
+    <ul class="list-inline list-unstyled text-center pt-3 ">
+        <li class="list-inline-item">
+            <a href="{% url 'home' %}" class="main-font itm-color nav-itm">Home</a>
+        </li>
+            <li class="list-inline-item">
+            <a href="{% url 'products' %}" class="main-font itm-color nav-itm">Products</a>
+        </li>
+            <li class="list-inline-item">
+            <a href="" class="main-font itm-color nav-itm">Contact</a>
+        </li>
+        {% if request.user.is_authenticated %}
+            <li class="list-inline-item">
+                <a href="" class="main-font itm-color nav-itm">Logout</a>
+            </li> 
+        {% else %}
+            <li class="list-inline-item">
+                <a href="{% url 'account_signup' %}" class="main-font itm-color nav-itm">Register</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="{% url 'account_login' %}" class="main-font itm-color nav-itm">Login</a>
+            </li>
+        {% endif %}
+    </ul>
+</div>
