@@ -54,6 +54,15 @@
     font-family: "Black Ops One", sans-serif;
 }
 
+.qty-btn {
+    background: black;
+    color: #C0B01F;
+    font-size: 12px;
+    height: 30px;
+    border-radius: 10%; 
+    font-family: "Black Ops One", sans-serif;
+}
+
 .cat-btn {
     font-family: "Black Ops One", sans-serif;
     border: 2px solid black;
@@ -116,6 +125,10 @@ a:hover {
     border: 2px solid white;
     color: white;
     background-color: black;
+}
+
+.btn-change-itm:hover {
+    cursor: pointer;
 }
 
 
