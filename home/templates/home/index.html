@@ -43,11 +43,39 @@
     </div>
 </div>
 <div class="container">
+    <h3 class="main-font section-title text-center pt-4">Top Rated Products</h3>
+    <br>
     <div class="row">
-        <div class="col-12 col-4-lg">
-            <h3 class="main-font section-title text-center">Top Rated Products</h3>
-            <br>
-        </div>
+        {% for product in top_rated_products %}
+            <div class="col-12 col-md-4">
+                <div class="card h-100 border-0 pb-3 pt-3 pr-2">
+                    {% if product.image %}
+                    <a href="{% url 'detailed_product' product.id %}">
+                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'detailed_product' product.id %}">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    </a>
+                    {% endif %}
+                    <div class="card-body pb-0">
+                        <p class="mb-0"><strong>{{ product.name }}</strong></p>
+                    </div>
+                    <div class="card-footer bg-white pt-0 border-0 text-left">
+                        <div class="row">
+                            <div class="col">
+                                <p class=" mb-0 text-left">€{{ product.price }}</p>
+                                {% if product.rating %}
+                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / <strong>10</strong></small>
+                                {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
