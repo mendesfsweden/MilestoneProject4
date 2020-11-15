@@ -68,5 +68,61 @@
          "image_url":"https://goldnutrition.pt/wp-content/uploads/2019/09/GN-PreWorkoutExplosive.jpg",
          "image":"pre_workout_explosive.jpg"
       }
+   },
+   {
+      "pk":6,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5002111605",
+         "name":"Pre Workout Explosive",
+         "description":"Pre-Workout Explosive helps you achieve goals by improving muscle power and metabolism during training and delaying fatigue.",
+         "price":36.50,
+         "category":5,
+         "rating":8.5,
+         "image_url":"https://goldnutrition.pt/wp-content/uploads/2019/09/GN-PreWorkoutExplosive.jpg",
+         "image":"pre_workout_explosive.jpg"
+      }
+   },
+   {
+      "pk":7,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5002111605",
+         "name":"Pre Workout Explosive",
+         "description":"Pre-Workout Explosive helps you achieve goals by improving muscle power and metabolism during training and delaying fatigue.",
+         "price":36.50,
+         "category":5,
+         "rating":8.5,
+         "image_url":"https://goldnutrition.pt/wp-content/uploads/2019/09/GN-PreWorkoutExplosive.jpg",
+         "image":"pre_workout_explosive.jpg"
+      }
+   },
+   {
+      "pk":8,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5002111605",
+         "name":"Pre Workout Explosive",
+         "description":"Pre-Workout Explosive helps you achieve goals by improving muscle power and metabolism during training and delaying fatigue.",
+         "price":36.50,
+         "category":5,
+         "rating":8.5,
+         "image_url":"https://goldnutrition.pt/wp-content/uploads/2019/09/GN-PreWorkoutExplosive.jpg",
+         "image":"pre_workout_explosive.jpg"
+      }
+   },
+   {
+      "pk":9,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5002111605",
+         "name":"Pre Workout Explosive",
+         "description":"Pre-Workout Explosive helps you achieve goals by improving muscle power and metabolism during training and delaying fatigue.",
+         "price":36.50,
+         "category":5,
+         "rating":8.5,
+         "image_url":"https://goldnutrition.pt/wp-content/uploads/2019/09/GN-PreWorkoutExplosive.jpg",
+         "image":"pre_workout_explosive.jpg"
+      }
    }
 ]
