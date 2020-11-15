@@ -63,6 +63,10 @@
     font-family: "Black Ops One", sans-serif;
 }
 
+.page-btn {
+    color: black;
+}
+
 .cat-btn {
     font-family: "Black Ops One", sans-serif;
     border: 2px solid black;
@@ -131,6 +135,9 @@ a:hover {
     cursor: pointer;
 }
 
+.page-btn:hover {
+    color: #C0B01F;
+}
 
 /* -------------------------------- Media Queries */
 
