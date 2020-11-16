@@ -164,3 +164,11 @@ STANDARD_DELIVERY_PERCENTAGE = 10
 
 PRODUCTS_PER_PAGE = 8
 MAX_TOP_RATED = 6
+
+DEFAULT_ORDER_BY = '-rating'
+ORDERS = {
+    'price_asc': 'price',
+    'price_desc': '-price',
+    'rating_asc': 'rating',
+    'rating_desc': '-rating'
+}

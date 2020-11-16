@@ -3,7 +3,7 @@ from .models import Product, Category
 from django.contrib import messages
 from django.db.models import Q
 from django.core.paginator import Paginator
-from premiumbody.settings import PRODUCTS_PER_PAGE
+from premiumbody.settings import PRODUCTS_PER_PAGE, DEFAULT_ORDER_BY, ORDERS
 
 
 def all_products(request):
@@ -26,14 +26,17 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
+    order_param = request.GET.get('order_by')
+    order = ORDERS.get(order_param, DEFAULT_ORDER_BY)
+    products = products.order_by(order)
     paginator = Paginator(products, PRODUCTS_PER_PAGE)
-    page_number = request.GET.get('page') or 1
+    page_number = request.GET.get('page', 1)
     page_obj = paginator.get_page(page_number)
 
     context = {
         'page_obj': page_obj,
         'search_term': query,
-
+        'order': order,
     }
 
     return render(request, 'products/products.html', context)
