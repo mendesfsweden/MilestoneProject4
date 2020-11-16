@@ -80,7 +80,13 @@
                                         <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                     <td class="py-3">
-                                        <a id="remove_{{ item.item_id }}"><i class="fas fa-times text-danger btn-change-itm"></i></a>
+                                        <form class="form" action="{% url 'remove_from_cart' item.item_id %}" method="POST">
+                                            {% csrf_token %}
+                                            <button type="submit">
+                                                <i class="fas fa-times text-danger btn-change-itm"></i>
+                                            </button>
+                                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                        </form>
                                     </td>
                                 </tr>
                             {% endfor %}
