@@ -24,10 +24,23 @@ def add_to_cart(request, item_id):
 
 def remove_from_cart(request, item_id):
     """ remove item from shopping cart """
-    
+
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
     cart.pop(item_id, None)
 
     request.session['cart'] = cart
+    return redirect(redirect_url)
+
+def decrement_cart_itm(request, item_id):
+    """ decrement a specific product qty from shopping cart """
+
+    redirect_url = request.POST.get('redirect_url')
+    cart = request.session.get('cart', {})
+    product = cart.get(item_id)
+
+    if product:
+        cart[item_id] -= 1
+        request.session['cart'] = cart
+
     return redirect(redirect_url)

@@ -150,6 +150,20 @@ a:hover {
     color: #C0B01F;
 }
 
+/* ----------------------- Remove arrows from number input boxes */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 /* -------------------------------- Media Queries */
 
 @media (max-width: 992px) {
