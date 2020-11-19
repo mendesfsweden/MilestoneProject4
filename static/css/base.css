@@ -73,6 +73,11 @@ body {
     font-family: "Black Ops One", sans-serif;
 }
 
+.btn-change-itm {
+    background-color: white;
+    border: none;
+}
+
 .page-btn {
     color: black;
 }
