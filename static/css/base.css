@@ -16,6 +16,13 @@ body {
     padding-top: 40px;
 }
 
+.container-pagination {
+    outline: 4px solid #C0B01F;
+    background-color: black;
+    height: 30px;
+    width: 180px;
+}
+
 .footer {
     min-height:50px;
 }
@@ -45,6 +52,11 @@ body {
 .products-title {
     font-family: "Black Ops One", sans-serif;
     color: black;
+}
+
+.pagination-txt {
+    color: #C0B01F;
+    font-family: "Black Ops One", sans-serif;
 }
 
 .start-shop-btn {
@@ -79,7 +91,7 @@ body {
 }
 
 .page-btn {
-    color: black;
+    color: #C0B01F;
 }
 
 .cat-btn {
@@ -152,7 +164,7 @@ a:hover {
 }
 
 .page-btn:hover {
-    color: #C0B01F;
+    color: white;
 }
 
 /* ----------------------- Remove arrows from number input boxes */
