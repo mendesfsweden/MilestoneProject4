@@ -88,7 +88,7 @@
                                     <td class="py-3">
                                         <form class="form" action="{% url 'remove_from_cart' item.item_id %}" method="POST">
                                             {% csrf_token %}
-                                            <button type="submit" class="btn-change-itm">
+                                            <button type="submit" class="btn-del-itm">
                                                 <i class="fas fa-times text-danger"></i>
                                             </button>
                                             <input type="hidden" name="redirect_url" value="{{ request.path }}">

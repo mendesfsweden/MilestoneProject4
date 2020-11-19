@@ -73,7 +73,7 @@ body {
     font-family: "Black Ops One", sans-serif;
 }
 
-.btn-change-itm {
+.btn-del-itm {
     background-color: white;
     border: none;
 }
@@ -147,7 +147,7 @@ a:hover {
     background-color: black;
 }
 
-.btn-change-itm:hover {
+.btn-del-itm:hover {
     cursor: pointer;
 }
 
