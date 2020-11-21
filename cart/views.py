@@ -32,6 +32,7 @@ def remove_from_cart(request, item_id):
     request.session['cart'] = cart
     return redirect(redirect_url)
 
+
 def decrement_cart_itm(request, item_id):
     """ decrement a specific product qty from shopping cart """
 
