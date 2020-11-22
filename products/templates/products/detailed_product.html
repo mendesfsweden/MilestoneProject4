@@ -68,6 +68,9 @@
 
                             <div class="col-12">
                                 <a href="{% url 'products' %}" class="btn buy-btn mt-5">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
                                 {% if request.user.is_authenticated %}
