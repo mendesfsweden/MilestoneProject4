@@ -4,7 +4,7 @@
       "model":"products.product",
       "fields":{
          "sku":"pp5001340155",
-         "name":"Total Whey",
+         "name":"Total Whey 1kg",
          "description":"With a low fat content and few carbohydrates, Total Whey contains a high content of concentrated whey isolates. To improve its formula, we added a complex of digestive enzymes and a patented symbiotic – Lactowise ® – with probiotic and prebiotic ingredients, which contributes to intestinal health. The combination of these two ingredients enhances the absorption of nutrients and enhances the already known benefits of whey protein in improving body composition.",
          "price":55.99,
          "category":1,
@@ -73,56 +73,168 @@
       "pk":6,
       "model":"products.product",
       "fields":{
-         "sku":"pp5002111605",
-         "name":"Pre Workout Explosive",
-         "description":"Pre-Workout Explosive helps you achieve goals by improving muscle power and metabolism during training and delaying fatigue.",
-         "price":36.50,
-         "category":5,
-         "rating":8.5,
-         "image_url":"https://goldnutrition.pt/wp-content/uploads/2019/09/GN-PreWorkoutExplosive.jpg",
-         "image":"pre_workout_explosive.jpg"
+         "sku":"pp5002111606",
+         "name":"Iso Hydro Whey 2kg",
+         "description":"If you are looking for the best protein this is going to be love at first sight. It has patented proteins isolated and hydrolyzed, from the milk derived from the grass-fed cows, and only 1% fat. Perfect digestibility and absorption.",
+         "price":70.50,
+         "category":1,
+         "rating":8.6,
+         "image_url":"https://goldnutrition.pt/en/product/isohydro-whey-2kg/",
+         "image":"IsoHydro2kg.jpg"
       }
    },
    {
       "pk":7,
       "model":"products.product",
       "fields":{
-         "sku":"pp5002111605",
-         "name":"Pre Workout Explosive",
-         "description":"Pre-Workout Explosive helps you achieve goals by improving muscle power and metabolism during training and delaying fatigue.",
-         "price":36.50,
-         "category":5,
-         "rating":8.5,
-         "image_url":"https://goldnutrition.pt/wp-content/uploads/2019/09/GN-PreWorkoutExplosive.jpg",
-         "image":"pre_workout_explosive.jpg"
+         "sku":"pp5002111607",
+         "name":"Total Whey 260g",
+         "description":"What's its secret? We´ll tell you everything. It contains pre and probiotics that help the intestinal flora to be more efficient in absorbing the nutrients, helping all those who take supplements in order to be healthier and to obtain better results.",
+         "price":11.99,
+         "category":1,
+         "rating":8.0,
+         "image_url":"https://goldnutrition.pt/en/product/total-whey-260g/",
+         "image":"whey_total260g.png"
       }
    },
    {
       "pk":8,
       "model":"products.product",
       "fields":{
-         "sku":"pp5002111605",
-         "name":"Pre Workout Explosive",
-         "description":"Pre-Workout Explosive helps you achieve goals by improving muscle power and metabolism during training and delaying fatigue.",
-         "price":36.50,
-         "category":5,
+         "sku":"pp5002111608",
+         "name":"Total Protein Bar",
+         "description":"Yes, Total Protein contains 13 vitamins and minerals that enrich the nutritional power of this bar. In addition it has a chocolate coating with an incredible soft texture and delicious flavour. Will you resist?",
+         "price":1.70,
+         "category":1,
          "rating":8.5,
-         "image_url":"https://goldnutrition.pt/wp-content/uploads/2019/09/GN-PreWorkoutExplosive.jpg",
-         "image":"pre_workout_explosive.jpg"
+         "image_url":"https://goldnutrition.pt/en/product/total-protein-bar/",
+         "image":"total_bar.jpg"
       }
    },
    {
       "pk":9,
       "model":"products.product",
       "fields":{
-         "sku":"pp5002111605",
-         "name":"Pre Workout Explosive",
-         "description":"Pre-Workout Explosive helps you achieve goals by improving muscle power and metabolism during training and delaying fatigue.",
-         "price":36.50,
+         "sku":"pp5002111609",
+         "name":"V-Protein 1kg",
+         "description":"If you are looking for a vegetable alternative for your protein intake and maintenance of muscle mass, V-Protein is the perfect product. With pea and whole rice protein, this is a delicious choice both in shakes and in your recipes",
+         "price":29.99,
+         "category":1,
+         "rating":8.7,
+         "image_url":"https://goldnutrition.pt/en/product/v-protein-1kg/",
+         "image":"v_protein.png"
+      }
+   },
+   {
+      "pk":10,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5002111610",
+         "name":"V-Protein 250g",
+         "description":"If you are looking for a vegetable alternative for your protein intake and maintenance of muscle mass, V-Protein is the perfect product. With pea and whole rice protein, this is a delicious choice both in shakes and in your recipes",
+         "price":9.99,
+         "category":1,
+         "rating":8.7,
+         "image_url":"https://goldnutrition.pt/en/product/v-protein-240g/",
+         "image":"v_protein250.jpg"
+      }
+    },
+    {
+      "pk":11,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5002111611",
+         "name":"Peatatoes",
+         "description":"The coolest, healthiest snack on the market which is pea protein based. Crunchy and not fried, the Peatatoes have 3 irresistible flavors! Now you have no excuse to eat an healthy snack!",
+         "price":1.99,
+         "category":1,
+         "rating":9.5,
+         "image_url":"https://goldnutrition.pt/en/product/peatatoes/",
+         "image":"peatatoes.png"
+      }
+   },
+   {
+      "pk":12,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5002111612",
+         "name":"Pre Workout Endurance",
+         "description":"We know that endurance training, such as running and cycling, is often long and energy begins to disappear. If you do not want to lose the fire and you want to shine until the end, we advise you to get your Pre-Workout Endurance.",
+         "price":15.50,
          "category":5,
-         "rating":8.5,
-         "image_url":"https://goldnutrition.pt/wp-content/uploads/2019/09/GN-PreWorkoutExplosive.jpg",
-         "image":"pre_workout_explosive.jpg"
+         "rating":9.1,
+         "image_url":"https://goldnutrition.pt/en/product/pre-workout-endurance/",
+         "image":"pre_endurance.jpg"
+      }
+   },
+   {
+      "pk":13,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5002111613",
+         "name":"Pre Workout Impact",
+         "description":"The most impressive pre-workout from GoldNutrition has arrived, and it tastes great, like Watermelon! Do you want a supplement that gives you maximum and explosive strength? Pre Workout Impact improves muscle contraction, increases energy levels as well as protein synthesis and muscle growth.",
+         "price":17.50,
+         "category":5,
+         "rating":8.3,
+         "image_url":"https://goldnutrition.pt/en/product/pre-workout-impact/",
+         "image":"pre_impact.jpg"
+      }
+    },
+    {
+      "pk":14,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5002111614",
+         "name":"Bcaa Powder",
+         "description":"If for some reason you are unable to take whey protein for your muscle recovery or if you would like something to take just before training (or even during training), we have the perfect solution for you, the BCAA Powder. Formula BCAA Powder combines branched chain amino acids (BCAA) in a 4: 1: 1 ratio (Leucine, Isoleucine and Valine) with Glutamine. The combination of BCAA and Glutamine provides a formula that enhances protein synthesis, promotes better muscle recovery after exercise and prevents chronic fatigue.",
+         "price":24.99,
+         "category":3,
+         "rating":8.8,
+         "image_url":"https://goldnutrition.pt/en/product/bcaa-powder/",
+         "image":"bcaa_powder.jpg"
+      }
+    },
+    {
+      "pk":15,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5002111615",
+         "name":"Creatine Power Mix",
+         "description":"Creatine is a key molecule so the body can quickly generate energy. Reach your peak with Creatine Power Mix!",
+         "price":19.99,
+         "category":4,
+         "rating":7.9,
+         "image_url":"https://goldnutrition.pt/en/product/creatine-power-mix/",
+         "image":"creatine_power.jpg"
+      }
+   },
+   {
+      "pk":16,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5002111616",
+         "name":"Vegan Bio Ball Mini",
+         "description":"100% natural energy mini balls made from date paste, oats (gluten free) and with ingredients of biological origin. Available in two versions: vegetable and fruit, and protein with a touch of cocoa.",
+         "price":1.99,
+         "category":1,
+         "rating":8.0,
+         "image_url":"https://goldnutrition.pt/en/product/vegan-organic-ball-mini/",
+         "image":"vegan_bar.png"
+      }
+   },
+   {
+      "pk":17,
+      "model":"products.product",
+      "fields":{
+         "sku":"pp5002111617",
+         "name":"Low Carb Crunchy",
+         "description":"Are you looking for a low sugar snack for your meal? Low Carb Crunchy is your ally in weight loss. In addition to containing little sugar is rich in protein and fibre which enhances the feeling of satiety. The best? It has a chocolate coating and a super crispy texture.",
+         "price":1.85,
+         "category":1,
+         "rating":8.9,
+         "image_url":"https://goldnutrition.pt/en/product/low-carb-crunchy/",
+         "image":"low_carb_bar.jpg"
       }
    }
 ]
