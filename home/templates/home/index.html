@@ -49,7 +49,7 @@
     <div class="row">
         {% for product in top_rated_products %}
             <div class="col-12 col-md-4">
-                <div class="card h-100 border-0 pb-3 pt-3 pr-2">
+                <div class="card h-100 border-0 pb-5 pt-3 pr-2">
                     {% if product.image %}
                     <a href="{% url 'detailed_product' product.id %}">
                         <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
