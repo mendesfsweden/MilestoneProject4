@@ -7,7 +7,7 @@ from premiumbody.settings import PRODUCTS_PER_PAGE, DEFAULT_ORDER_BY, ORDERS
 
 
 def all_products(request):
-    """ shows all products, search bar and sorting """
+    """ shows all products, search bar, sorting and pagination """
 
     products = Product.objects.all()
     query = None
