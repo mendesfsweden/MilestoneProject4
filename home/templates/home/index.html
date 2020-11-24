@@ -29,27 +29,12 @@
     </div>
 </div>
 <div class="container">
-    <div class="row">
-        <div class="col-12 col-4-lg">
-            <br>
-            <h3 class="main-font section-title text-center">What our customers say</h3>
-            <br>
-            <h5>John Roth</h5>
-            <p>"I have been buying all my supplements from Premiumbody for months and they have always delivered the best service".</p>
-            <h5>Sarah Williams</h5>
-            <p>"World class service!"</p>
-            <br>
-            <hr>
-        </div>
-    </div>
-</div>
-<div class="container">
     <h3 class="main-font section-title text-center pt-4">Top Rated Products</h3>
     <br>
     <div class="row">
         {% for product in top_rated_products %}
-            <div class="col-12 col-md-4">
-                <div class="card h-100 border-0 pb-5 pt-3 pr-2">
+            <div class="col-12 col-md-4 mb-3">
+                <div class="card h-100 border-1 pt-3">
                     {% if product.image %}
                     <a href="{% url 'detailed_product' product.id %}">
                         <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -77,6 +62,20 @@
                 </div>
             </div>
         {% endfor %}
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-4-lg">
+            <br>
+            <h3 class="main-font section-title text-center">What our customers say</h3>
+            <br>
+            <h5>John Roth</h5>
+            <p>"I have been buying all my supplements from Premiumbody for months and they have always delivered the best service".</p>
+            <h5>Sarah Williams</h5>
+            <p>"World class service!"</p>
+            <br>
+        </div>
     </div>
 </div>
 {% endblock %}

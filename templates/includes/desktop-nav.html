@@ -12,7 +12,7 @@
         </li>
         {% if request.user.is_authenticated %}
             <li class="list-inline-item">
-                <a href="" class="main-font itm-color nav-itm">Logout</a>
+                <a href="{% url 'account_logout' %}" class="main-font itm-color nav-itm">Logout</a>
             </li> 
         {% else %}
             <li class="list-inline-item">

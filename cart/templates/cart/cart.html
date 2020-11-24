@@ -24,14 +24,15 @@
             <div class="col">
                 {% if cart_items %}
                     <div class="table-responsive rounded">
-                        <table class="table table-sm table-borderless">
-                            <thead class="text-black">
+                        <table class="table table-sm table-borderless mt-3">
+                            <thead class="text-black border-bottom">
                                 <tr>
-                                    <th scope="col"></th>
+                                    <th scope="col">Product Image</th>
                                     <th scope="col">Product Info</th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Qty</th>
                                     <th scope="col">Subtotal</th>
+                                    <th scope="col">Action</th>
                                 </tr>
                             </thead>
 
@@ -58,7 +59,7 @@
                                         </form>
                                         <div class="form-group w-50">
                                             <div class="input-group">
-                                                <div class="input-group-prepend d-none d-lg-block">
+                                                <div class="input-group-prepend">
                                                     <button class="btn qty-btn" 
                                                             id="dec-btn{{ item.item_id }}" form="dec-form{{ item.item_id }}" type="submit"
                                                             {% if item.quantity == 1 %}disabled{% endif %}>
@@ -70,7 +71,7 @@
                                                 <input class="form-control form-control-sm text-center" type="number"
                                                     name="quantity" value="{{ item.quantity }}" min="1" max="99" step="1"
                                                     id="id_qty_{{ item.item_id }}" readonly>
-                                                <div class="input-group-append d-none d-lg-block">
+                                                <div class="input-group-append">
                                                     <button class="btn qty-btn"
                                                         id="inc-btn{{ item.item_id }}" form="inc-form{{ item.item_id }}" type="submit"
                                                         {% if item.quantity == 99 %}disabled{% endif %}>
