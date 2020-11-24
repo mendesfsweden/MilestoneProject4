@@ -24,13 +24,12 @@
             <br>
             <p>Sports nutrition supplements include a variety of drinks, powders and pills designed to improve athletic performance and/or fill gaps in the diet of people who play sports or workout on a regular basis.</p>
             <br>
-            <hr>
+            <hr class="w-50">
         </div>
     </div>
 </div>
 <div class="container">
-    <h3 class="main-font section-title text-center pt-4">Top Rated Products</h3>
-    <br>
+    <h3 class="main-font section-title text-center pt-4 pb-3">Top Rated Products</h3>
     <div class="row">
         {% for product in top_rated_products %}
             <div class="col-12 col-md-4 mb-3">
@@ -63,19 +62,44 @@
             </div>
         {% endfor %}
     </div>
+    <br>
+    <hr class="w-50">
 </div>
 <div class="container">
+    <h3 class="main-font section-title text-center pt-3 pb-3">What our customers say</h3>
     <div class="row">
-        <div class="col-12 col-4-lg">
-            <br>
-            <h3 class="main-font section-title text-center">What our customers say</h3>
-            <br>
-            <h5>John Roth</h5>
-            <p>"I have been buying all my supplements from Premiumbody for months and they have always delivered the best service".</p>
-            <h5>Sarah Williams</h5>
-            <p>"World class service!"</p>
-            <br>
+        <div class="col-12 col-md-3 mb-3">
+            <div class="card border-0">
+                <div class="card-body">
+                    <p class="card-text">"Great customer service. Always willing to help and with the right answers."</p>
+                    <p class="card-text"><small class="text-muted">John Roth</small></p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+        <div class="col-12 col-md-3 mb-3">
+            <div class="card border-0">
+                <div class="card-body">
+                    <p class="card-text">"I have been buying all my supplements from Premiumbody for months and they have always delivered the best service."</p>
+                    <p class="card-text"><small class="text-muted">John Roth</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-3 mb-3">
+            <div class="card border-0">
+                <div class="card-body">
+                    <p class="card-text">"World Class Service!"</p>
+                    <p class="card-text"><small class="text-muted">John Roth</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-3 mb-3">
+            <div class="card border-0">
+                <div class="card-body">
+                    <p class="card-text">"My favorite online store. Great quality at great prices."</p>
+                    <p class="card-text"><small class="text-muted">Sara Williams</small></p>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>   
 {% endblock %}

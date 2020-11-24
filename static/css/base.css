@@ -151,6 +151,7 @@ a:hover {
 .nav-itm:hover,
 .support-txt:hover {
     color: #C0B01F;
+    border-color: #C0B01F;
 }
 
 .cat-btn:hover {
