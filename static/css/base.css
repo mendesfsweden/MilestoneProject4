@@ -110,10 +110,6 @@ body {
     background-color: black;
 }
 
-a:hover {
-    text-decoration: none;
-}
-
 .social-media {
     background: black;
     height: 100px;
@@ -122,7 +118,12 @@ a:hover {
 .social-links {
     color: #fafafa;
     padding: 10px;
-    font-size: 30px;
+    font-size: 26px;
+}
+
+.support-txt {
+    color: #fafafa;
+    font-size: 15px;
 }
 
 .delivery-banner {
@@ -135,6 +136,10 @@ a:hover {
     font-size: 16px;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .logo:hover,
 .buy-btn:hover {
     color: white;
@@ -143,7 +148,8 @@ a:hover {
 .social-links:hover,
 .itm-color:hover,
 .start-shop-btn:hover,
-.nav-itm:hover {
+.nav-itm:hover,
+.support-txt:hover {
     color: #C0B01F;
 }
 
