@@ -9,7 +9,7 @@
         </li>
         {% if request.user.is_authenticated %}
             <li class="list-inline-item">
-                <a href="" class="main-font itm-color nav-itm">Profile</a>
+                <a href="{% url 'profile' %}" class="main-font itm-color nav-itm">Profile</a>
             </li> 
             <li class="list-inline-item">
                 <a href="{% url 'account_logout' %}" class="main-font itm-color nav-itm">Logout</a>
