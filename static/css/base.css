@@ -226,3 +226,17 @@ input[type=number] {
 .allauth-btn:hover {
     color: white;
 }
+
+/* Image cart template */
+
+.image-container {
+    width:75px; 
+    height:75px; 
+    text-align:center; 
+    vertical-align:middle
+}
+
+.prod-image {
+    max-width: 100%;
+    max-height: 100%;
+}
