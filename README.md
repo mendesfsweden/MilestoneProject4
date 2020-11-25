@@ -15,6 +15,26 @@ The business/store owner can access, archive, edit or add products to the databa
 -   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 -   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
+### Frameworks, Libraries & Programs Used
+
+1. [Google Fonts:](https://fonts.google.com/)
+    - "Black Ops One" and "Assistant" are the fonts used in this project, imported from Google Fonts.
+1. [Git](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+1. [GitHub:](https://github.com/)
+    - GitHub is used to store the project's code after being pushed from Git.
+1. [Figma:](https://figma.com/)
+    - Figma was used to create the wireframes for this project.
+1. [Django:](https://www.djangoproject.com/)
+    - Django was the framework used to build this project.
+1. [jQuery:](https://jquery.com/)
+    - jQuery was used to make certain Bootstrap components to function.
+1. [Bootstrap:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+    - Bootstrap was used to assist with the responsiveness and styling of the website.
+1. [PostgreSQL:](https://www.postgresql.org/)
+    - PostgreSQL was the database service used to store the project's data.
+
+
 ## Credits
 
 ### Media
