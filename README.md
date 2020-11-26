@@ -45,4 +45,4 @@ The business/store owner can access, archive, edit or add products to the databa
 ### Acknowledgements
 
 -   My Mentor for continuous helpful feedback.
--   A major part of the logic and web application structure used in the PREMIUMBODY project is from this [GitHub repository](https://github.com/ckz8780/boutique_ado_v1). 
+-   A major part of the logic and web application structure used in the PREMIUMBODY project is from a Code Institute tutorial that can be found in this [GitHub repository](https://github.com/ckz8780/boutique_ado_v1). 
