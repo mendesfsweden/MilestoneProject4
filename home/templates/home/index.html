@@ -81,13 +81,13 @@
     </div>
     {% if request.user.is_authenticated %}
     <div class="row">
-        <div class="col-4 offset-4">
+        <div class="col-4 offset-4 text-center">
             <form class="" action="{% url 'add_review' %}" method="POST">
                 {% csrf_token %}
                 <div class="form-group">
-                    <label for="review-text">Thoughts about us?</label>
-                    <textarea name="text" rows="3" class="form-control" id="review-text"
-                        placeholder="..." required></textarea>
+                    <label class="font-weight-bold" for="review-text">Thoughts about us?</label>
+                    <textarea name="text" rows="3" class="form-control review-box" id="review-text"
+                        placeholder="Leave a comment..." required></textarea>
                 </div>
                 <button class="btn buy-btn mb-3">
                     <span>Send</span>
