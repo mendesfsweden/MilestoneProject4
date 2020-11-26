@@ -7,6 +7,7 @@
 This project is a sports nutrition supplements e-commerce web application. The main goal is to allow users to register a profile and purchase the products avaiable.
 The business/store owner can access, archive, edit or add products to the database through the Admin interface. 
 
+<img src="media/mockup_demo_image.png" width="1000" height="400">
 
 ### Languages Used
 
