@@ -33,6 +33,8 @@ The business/store owner can access, archive, edit or add products to the databa
     - Bootstrap was used to assist with the responsiveness and styling of the website.
 1. [PostgreSQL:](https://www.postgresql.org/)
     - PostgreSQL was the database service used to store the project's data.
+1. [Stripe:](https://stripe.com/)
+    - Stripe was the online payment processing platform used in this project to process the card payments.
 
 
 ## Credits
