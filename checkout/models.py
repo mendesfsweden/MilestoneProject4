@@ -35,6 +35,8 @@ class Order(models.Model):
     original_cart = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False,
                                   blank=False, default='')
+    promo_code = models.CharField(max_length=8, null=False, blank=False,
+                                  default='')
 
     def _generate_order_number(self):
         """
@@ -91,5 +93,9 @@ class OrderLineItem(models.Model):
         return f'SKU {self.product.sku} on order {self.order.order_number}'
 
 
-
-
+class Promo(models.Model):
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                     null=True, blank=True,
+                                     related_name='promos')
+    promo_code = models.CharField(max_length=8, null=False, blank=False)
+    promo_used = models.BooleanField(default=False)

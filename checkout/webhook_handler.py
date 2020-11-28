@@ -6,6 +6,7 @@ from django.conf import settings
 from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.models import UserProfile
+from .views import generate_promo_code
 
 import json
 import time
@@ -98,6 +99,7 @@ def handle_payment_intent_succeeded(request, event):
             attempt += 1
             time.sleep(1)
     if order_exists:
+        generate_promo_code(order.user_profile, order.grand_total)
         _send_confirmation_email(order)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
@@ -133,6 +135,7 @@ def handle_payment_intent_succeeded(request, event):
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | ERROR: {e}',
                 status=500)
+    generate_promo_code(order.user_profile, order.grand_total)
     _send_confirmation_email(order)
     return HttpResponse(
         content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',

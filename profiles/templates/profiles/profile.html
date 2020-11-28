@@ -68,6 +68,39 @@
                     </table>
                 </div>
             </div>
+            <div class="col-6 offset-6">
+                <legend>Promo Codes</legend>
+                {% if not promo_codes or promo_codes|length == 0 %}
+                    <span>No Promo Codes yet</span>
+                {% else %}
+                    <div class="promo-codes table-responsive rounded">
+                        <table class="table table-sm table-borderless">
+                            <thead class="border-bottom">
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for code in promo_codes %}
+                                    <tr>
+                                        <td>
+                                        {{ code.promo_code }}
+                                        </td>
+                                        <td>
+                                            {% if code.promo_used %}
+                                                <span>Used</span>
+                                            {% else %}
+                                                <span>Not Used</span>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% endif %}
+            </div>
         </div>
     </div>
     

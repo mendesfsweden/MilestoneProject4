@@ -25,7 +25,8 @@
     color: #aab7c4;
 }
 
-.order-history {
+.order-history,
+.promo-codes {
     max-height: 325px; /* height of profile form + submit button */
     overflow-y: auto;
 }

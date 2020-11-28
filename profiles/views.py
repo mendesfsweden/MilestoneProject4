@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import UserProfile
 from .forms import UserProfileForm
-from checkout.models import Order
+from checkout.models import Order, Promo
 
 
 def profile(request):
@@ -15,11 +15,13 @@ def profile(request):
 
     form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
+    promo_codes = Promo.objects.filter(user_profile=profile)
 
     template = 'profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
+        'promo_codes': promo_codes,
     }
 
     return render(request, template, context)

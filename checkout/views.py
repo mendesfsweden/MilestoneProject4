@@ -4,14 +4,17 @@ from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
-from .models import Order, OrderLineItem
+from .models import Order, OrderLineItem, Promo
 from products.models import Product
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 from cart.contexts import cart_contents
+from premiumbody.settings import PROMO_CODE_TRESHOLD, PROMO_CODE_VALUE
 
 import stripe
 import json
+import random
+import string
 
 
 @require_POST
@@ -139,7 +142,11 @@ def checkout_success(request, order_number):
     profile = UserProfile.objects.get(user=request.user)
     # Attach the user's profile to the order
     order.user_profile = profile
+    order.promo_code = generate_promo_code(order.user_profile,
+                                           order.grand_total)
     order.save()
+
+
 
     # Save the user's info
     if save_info:
@@ -166,3 +173,18 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
+
+
+def generate_promo_code(user, order_total):
+    print(user, order_total)
+    if order_total < PROMO_CODE_TRESHOLD:
+        return None
+    code = get_random_string()
+    promo = Promo(user_profile=user, promo_code=code)
+    print(promo)
+    promo.save()
+    return code
+
+
+def get_random_string():
+    return ''.join(random.choice(string.ascii_uppercase) for i in range(8))
