@@ -35,7 +35,7 @@ class Order(models.Model):
     original_cart = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(max_length=254, null=False,
                                   blank=False, default='')
-    promo_code = models.CharField(max_length=8, null=False, blank=False,
+    promo_code = models.CharField(max_length=8, null=True, blank=False,
                                   default='')
 
     def _generate_order_number(self):

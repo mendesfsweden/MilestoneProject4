@@ -27,6 +27,6 @@
 
 .order-history,
 .promo-codes {
-    max-height: 325px; /* height of profile form + submit button */
+    max-height: 180px; /* height of profile form + submit button */
     overflow-y: auto;
 }
