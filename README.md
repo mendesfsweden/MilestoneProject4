@@ -2,7 +2,7 @@
 
 <h2 align="center"> MS4 - Full Stack Frameworks - Code Institute </h2>
 
-[Click here for a live demo version of this project.]()
+[Click here for a live demo version of this project.](https://premiumbody.herokuapp.com/)
 
 This project is a sports nutrition supplements e-commerce web application. The main goal is to allow users to register a profile and purchase the products avaiable.
 The business/store owner can access, archive, edit or add products to the database through the Admin interface. 
