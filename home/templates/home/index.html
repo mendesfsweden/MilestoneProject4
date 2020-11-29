@@ -90,7 +90,6 @@
                                                     </div>
                                             {% endif %}
                                         </div>
-                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                     </div>
                                 </form>
                             </div>
@@ -120,7 +119,7 @@
     {% if request.user.is_authenticated %}
     <div class="row">
         <div class="col-4 offset-4 text-center">
-            <form class="" action="{% url 'add_review' %}" method="POST">
+            <form action="{% url 'add_review' %}" method="POST">
                 {% csrf_token %}
                 <div class="form-group">
                     <label class="font-weight-bold" for="review-text">Thoughts about us?</label>

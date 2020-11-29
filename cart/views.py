@@ -10,7 +10,7 @@ def add_to_cart(request, item_id):
     """ Add a quantity of the specified product to the shopping cart """
 
     quantity = int(request.POST.get('quantity', '1'))
-    redirect_url = request.POST.get('redirect_url')
+    redirect_url = request.headers.get('referer')
     cart = request.session.get('cart', {})
 
     if item_id in list(cart.keys()):
@@ -25,7 +25,7 @@ def add_to_cart(request, item_id):
 def remove_from_cart(request, item_id):
     """ remove item from shopping cart """
 
-    redirect_url = request.POST.get('redirect_url')
+    redirect_url = request.headers.get('referer')
     cart = request.session.get('cart', {})
     cart.pop(item_id, None)
 
@@ -36,7 +36,7 @@ def remove_from_cart(request, item_id):
 def decrement_cart_itm(request, item_id):
     """ decrement a specific product qty from shopping cart """
 
-    redirect_url = request.POST.get('redirect_url')
+    redirect_url = request.headers.get('referer')
     cart = request.session.get('cart', {})
     product = cart.get(item_id)
 

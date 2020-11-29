@@ -51,11 +51,9 @@
                                     <td class="py-3">
                                             <form id="dec-form{{ item.item_id }}" method="POST" action="{% url 'decrement_cart_itm' item.item_id %}">
                                                 {% csrf_token %}
-                                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                             </form>
                                             <form id="inc-form{{ item.item_id }}" method="POST" action="{% url 'add_to_cart' item.item_id %}">
                                                 {% csrf_token %}
-                                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                             </form>
                                         <div class="form-group w-50">
                                             <div class="input-group">
@@ -92,7 +90,6 @@
                                             <button type="submit" class="btn-del-itm">
                                                 <i class="fas fa-times text-danger"></i>
                                             </button>
-                                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                         </form>
                                     </td>
                                 </tr>
