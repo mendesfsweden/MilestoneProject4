@@ -56,6 +56,44 @@
                                     <small class="text-muted">No Rating</small>
                                 {% endif %}
                             </div>
+                            <div class="col">
+                                <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
+                                    {% csrf_token %}
+                                    <div class="form-row pull-right">
+                                        <div class="col-12">
+                                            {% if request.user.is_authenticated %}
+                                                <button type="submit" class="btn buy-btn text-uppercase"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                                            {% else %}
+                                                    <button type="button" class="btn buy-btn text-uppercase" data-toggle="modal" data-target="#pageredirect">
+                                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                    </button>
+                                                    <div class="modal fade" id="pageredirect" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header mdl-header-bg">
+                                                                    <h5 class="modal-title logo-font" id="exampleModalLongTitle">Premiumbody</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span class="close-modal" aria-hidden="true">
+                                                                        <i class="fas fa-times"></i>
+                                                                    </span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <p class="text-left pt-3">Please <a href="{% url 'account_login' %}">sign in</a> to procede.</p>
+                                                                <p class="text-left">If you have not created an account yet, then please <a href="{% url 'account_signup' %}">sign up</a> first.</p>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn buy-btn text-uppercase mt-5" data-dismiss="modal">Close</button>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                            {% endif %}
+                                        </div>
+                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
