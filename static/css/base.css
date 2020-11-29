@@ -17,6 +17,12 @@ body {
     padding-top: 40px;
 }
 
+.selector-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
 .review-box {
     border: 2px black solid;
 }

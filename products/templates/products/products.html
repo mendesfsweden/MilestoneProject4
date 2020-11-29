@@ -32,32 +32,25 @@
                 </div>
             </form>
         </div>
-        <div class="row">
-            <div class="col-4 offset-4 col-md-3 offset-md-9 my-auto py-1 py-lg-0">
-                    <select id="categories-selector" class="custom-select custom-select-sm rounded-0 border mb-1">
-                        <option value="no-category" {% if  not category %}selected{% endif %}>Category...</option>
-                        <option value="protein" {% if category == 'protein' %}selected{% endif %}>Protein</option>
-                        <option value="mass_gainers" {% if category == 'mass_gainers' %}selected{% endif %}>Mass Gainers</option>
-                        <option value="bcaa" {% if category == 'bcaa' %}selected{% endif %}>Bcaa's</option>
-                        <option value="creatine" {% if category == 'creatine' %}selected{% endif %}>Creatine</option>
-                        <option value="pre_workout" {% if category == 'pre_workout' %}selected{% endif %}>Pre Workout</option>
-                    </select>
-            </div>
+        <div class="row selector-wrapper">
+            <select id="categories-selector" class="rounded-0 border mb-1">
+                <option value="no-category" {% if  not category %}selected{% endif %}>Category...</option>
+                <option value="protein" {% if category == 'protein' %}selected{% endif %}>Protein</option>
+                <option value="mass_gainers" {% if category == 'mass_gainers' %}selected{% endif %}>Mass Gainers</option>
+                <option value="bcaa" {% if category == 'bcaa' %}selected{% endif %}>Bcaa's</option>
+                <option value="creatine" {% if category == 'creatine' %}selected{% endif %}>Creatine</option>
+                <option value="pre_workout" {% if category == 'pre_workout' %}selected{% endif %}>Pre Workout</option>
+            </select>
+            <select id="sort-selector" class="rounded-0 border">
+                <option value="price_asc" {% if order == 'price' %}selected{% endif %}>Price (low to high)</option>
+                <option value="price_desc" {% if order == '-price' %}selected{% endif %}>Price (high to low)</option>
+                <option value="rating_asc" {% if order == 'rating' %}selected{% endif %}>Rating (low to high)</option>
+                <option value="rating_desc" {% if order == '-rating' %}selected{% endif %}>Rating (high to low)</option>
+            </select>
         </div>
+    <div class="container">    
         <div class="row">
-            <div class="col-4 offset-4 col-md-3 offset-md-9 my-auto py-1 py-lg-0">
-                    <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border">
-                        <option value="price_asc" {% if order == 'price' %}selected{% endif %}>Price (low to high)</option>
-                        <option value="price_desc" {% if order == '-price' %}selected{% endif %}>Price (high to low)</option>
-                        <option value="rating_asc" {% if order == 'rating' %}selected{% endif %}>Rating (low to high)</option>
-                        <option value="rating_desc" {% if order == '-rating' %}selected{% endif %}>Rating (high to low)</option>
-                    </select>
-            </div>
-        </div>  
-    </div>
-    <div class="container-fluid">    
-        <div class="row">
-            <div class="col-10 offset-1">
+            <div class="col-12">
                 <div class="row mt-1 mb-2"></div>
                     <div class="row">
                         {% for product in page_obj %}
