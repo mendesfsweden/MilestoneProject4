@@ -27,12 +27,49 @@
                 <form class="mt-3" method="POST" action="{% url 'profile' %}" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button class="btn profile-btn text-uppercase mb-3 float-right">Update</button>
+                    <div class="text-center">
+                        <button class="btn profile-btn text-uppercase mb-3">Update</button>
+                    </div>
                 </form>
             </div>
             <div class="col-12 col-lg-6">
+                <legend>Promo Codes</legend>
+                {% if not promo_codes or promo_codes|length == 0 %}
+                    <span>No Promo Codes yet</span>
+                {% else %}
+                    <div class="promo-codes table-responsive rounded">
+                        <table class="table table-sm table-borderless">
+                            <thead class="border-bottom">
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for code in promo_codes %}
+                                    <tr>
+                                        <td>
+                                        {{ code.promo_code }}
+                                        </td>
+                                        <td>
+                                            {% if code.promo_used %}
+                                                <span>Used</span>
+                                            {% else %}
+                                                <span>Not Used</span>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
                 <legend>Order History</legend>
-                <div class="order-history table-responsive rounded">
+                <div class="table-responsive rounded">
                     <table class="table table-sm table-borderless">
                         <thead class="border-bottom">
                             <tr>
@@ -67,37 +104,6 @@
                         </tbody>
                     </table>
                 </div>
-                <legend>Promo Codes</legend>
-                {% if not promo_codes or promo_codes|length == 0 %}
-                    <span>No Promo Codes yet</span>
-                {% else %}
-                    <div class="promo-codes table-responsive rounded">
-                        <table class="table table-sm table-borderless">
-                            <thead class="border-bottom">
-                                <tr>
-                                    <th>Code</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for code in promo_codes %}
-                                    <tr>
-                                        <td>
-                                        {{ code.promo_code }}
-                                        </td>
-                                        <td>
-                                            {% if code.promo_used %}
-                                                <span>Used</span>
-                                            {% else %}
-                                                <span>Not Used</span>
-                                            {% endif %}
-                                        </td>
-                                    </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
-                {% endif %}
             </div>
         </div>
     </div>
