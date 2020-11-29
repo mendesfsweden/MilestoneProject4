@@ -108,10 +108,10 @@
     <div class="row">
         {% for review in reviews %}
         <div class="col-12 col-md-3 mb-3">
-            <div class="card border-0">
+            <div class="card border-0 mt-3 mb-3 review">
                 <div class="card-body">
-                    <p class="card-text">"{{ review.text }}"</p>
-                    <p class="card-text"><small class="text-muted">{% if review.user_profile.full_name %} {{ review.user_profile.full_name }} {% else %} {{ review.user_profile.user.username }} {% endif %}</small></p>
+                    <p class="card-text username-review font-weight-bold">{% if review.user_profile.full_name %} {{ review.user_profile.full_name }} {% else %} {{ review.user_profile.user.username }} {% endif %}</p>
+                    <p class="card-text"><small>{{ review.text }}</small></p>
                 </div>
             </div>
         </div>

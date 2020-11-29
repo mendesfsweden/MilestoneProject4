@@ -257,3 +257,14 @@ input[type=number] {
 .modal-body a {
 	color: #17a2b8; 
 }
+
+/* Home - reviews*/
+
+.review {
+    background-color: black;
+    color: white;
+}
+
+.username-review {
+    color: #C0B01F;
+}
