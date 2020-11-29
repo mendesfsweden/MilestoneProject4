@@ -159,9 +159,18 @@ Plenty of testing was done to ensure that each product can be added and remove f
 - Filter by Category works accordingly:
     - When selecting a particular category, only the products that belong to that category are displayed.
 
-#### Payment ####
+### Payment ###
 
 Several payments were performed and it always worked as expected.
+
+### Other testing ###
+- The project was tested on the following browsers: Google Chrome, Microsoft Edge, Brave and Safari.
+- The project was tested on the following devices: MacBookAir, Huawei P30, Iphone XS and Ipad (list of bugs bellow).
+- Premiumbody was tested by friends and family to obtain User feedback, improve User Experience and detect any potencial issues.
+
+### Know Bugs ###
+- The quantity input on the cart page is too big for small screens. It is not displayed properly and it is impossible to see the input number. 
+- Home page hero image is not rendered on Iphone nor Ipad.
 
 note: more testing should have been described here but due to the project deadline that was not possible.
 
