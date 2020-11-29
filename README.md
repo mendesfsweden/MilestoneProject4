@@ -62,7 +62,7 @@ note: in order to make a purchase, users have to be registered and logged in.
 #### View, search and sort products 
 - The products can be accessed from the navigation bar and the "Start Shopping" button on the home page. Each page displays 8 products and the user can use the pagination at the bottom to see to following 8 products, and so forth. The users can see the products detailed information by clicking on the product image they wish to know more about.
 There is a search box at the top of page that allows the users to search for a particular product by name and by keyword.
-In order to sort the products by category, there is a select box to the left of the screen. To sort by price or rating, there is a select box to the right of the screen.
+In order to filter products by category, there is a select box to the left of the screen. To sort by price or rating, there is a select box to the right of the screen.
 
 #### Add/remove products to/from cart and update quantity
 - Once users are Logged In they can add products using the button with the cart icon available on each product card. Users can also add products to the cart in the detailed product page. From the detailed product page, the users can also decide the quantity of that particular product to be added to the cart. To remove a product or updated its quantity, the users have to click on the cart information (right of the navigation bar) and once they are redirected to the cart page an action button to remove and an input to update the quantity will be available.
@@ -84,7 +84,7 @@ In order to sort the products by category, there is a select box to the left of 
 
 - I would to like to add toasts to this project is order to show messages everytime the user performes an action. Messages can be thoughout the different code files in the project waiting to be displayed once toasts are implemented.
 
-
+## Technologies Used
 
 ### Languages Used
 
@@ -113,7 +113,57 @@ In order to sort the products by category, there is a select box to the left of 
     - PostgreSQL was the database service used to store the project's data.
 1. [Stripe:](https://stripe.com/)
     - Stripe was the online payment processing platform used in this project to process the card payments.
+1. [Amazon Web Services(AWS):](https://aws.amazon.com/)
+    - Amazon Web Services (S3) was used to store the projects static and media files.
 
+
+## Testing
+
+### Creating an account
+
+I've created my own personal account, along with the superuser account (/admin). Confirm authentication  worked as expected.
+
+### Creating an account
+
+Several attempts to Log In and Log Out were performed. Worked as expected.
+
+### Add | Remove a product from cart ###
+
+Plenty of testing was done to ensure that each product can be added and remove from the cart. Works as expected. 
+
+### Pagination ###
+
+#### Pagination without Search ####
+- *Previous Page* button disabled on products first page.
+- *Next Page* button disabled on products last page.
+- Appropriate number of pages appear based on the number of items per page(8).
+- Each page number returns their correct page URL.
+
+#### Pagination with Search ####
+- Search results match search parameters.
+- *Previous Page* button disabled on first page of search results.
+- *Next Page* button disabled on last page of search results.
+- Each page number returns their correct page URL.
+
+### Sort by Price or Rating and Filter by Category ###
+
+#### Sorting ####
+- Sorting by "Price" works accordingly:
+    - ascending (Low to High)
+    - descending (High to Low)
+- Sorting by "Rating" works accordingly:
+    - ascending (lowest to highest)
+    - descending (highest to lowest)
+
+#### Filter ####
+- Filter by Category works accordingly:
+    - When selecting a particular category, only the products that belong to that category are displayed.
+
+#### Payment ####
+
+Several payments were performed and it always worked as expected.
+
+note: more testing should have been described here but due to the project deadline that was not possible.
 
 ## Credits
 
