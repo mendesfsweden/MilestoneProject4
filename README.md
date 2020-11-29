@@ -26,8 +26,8 @@ note: in order to make a purchase, users have to be registered and logged in.
 - be able to login and logout.
 - be able to search for products by name or keyword.
 - be able to see the top rated products.
-- be able to see other users comments about their experience with the website.
-- have a way to contact the website for support.
+- be able to see other users comments about their experience with the website on the home page.
+- be able to leave a comment once a purchase has been completed.
 - be able to add and remove products to and from the cart, as well as update the quantity of each item.
 - be able to make a purchase of the items in the cart with a credit card. 
 - have access to detailed information about my purchase once it is completed, as well as get that same information on my email through a confirmation email. 
@@ -48,6 +48,42 @@ note: in order to make a purchase, users have to be registered and logged in.
 
 -   ### Wireframes
     -   [View Mockups]() 
+
+## Features
+
+### Exisiting Features
+
+#### Register an account
+- Anybody can register for free and create their own unique account. A register button can be found on the navigation bar.
+
+#### Log In/ Log Out to/from Account
+- Registered users can safely Log In and Log Out by using the login/logout buttons on the navigation bar.
+
+#### View, search and sort products 
+- The products can be accessed from the navigation bar and the "Start Shopping" button on the home page. Each page displays 8 products and the user can use the pagination at the bottom to see to following 8 products, and so forth. The users can see the products detailed information by clicking on the product image they wish to know more about.
+There is a search box at the top of page that allows the users to search for a particular product by name and by keyword.
+In order to sort the products by category, there is a select box to the left of the screen. To sort by price or rating, there is a select box to the right of the screen.
+
+#### Add/remove products to/from cart and update quantity
+- Once users are Logged In they can add products using the button with the cart icon available on each product card. Users can also add products to the cart in the detailed product page. From the detailed product page, the users can also decide the quantity of that particular product to be added to the cart. To remove a product or updated its quantity, the users have to click on the cart information (right of the navigation bar) and once they are redirected to the cart page an action button to remove and an input to update the quantity will be available.
+
+#### Payment, save information and confirmation email 
+- Only registered users can purchase products. Once in the cart page and ready to proceed to the payment, the users can press the "checkout" button and they'll be redirected to the payment page, fill out any missing required fields (users can select the option to save information) and complete the order. A field for the promotional code will be available and if filled out and valid the user will be able to see it deducted in the total amount to pay.  Once the order is completed, users are redirected to a success page where the order information will be available. A confirmation email with the order information is automatically sent to the users once order is completed.
+
+#### Promotional Codes
+- For every purchase over 100€, a promotial code will be generated and the users will be able to use it in the following purchase. The discount will be of 10€. A list of promotional codes can be found on the profile page. The users will also have access to informatin about if and which codes have or not been used.
+
+#### Profiles 
+- In the profile page, the user will be able to update the delivery information, as well as have access to the promotional codes and order history.
+
+#### Review
+- Users can leave a review once the finalize their purchase. A comment box will be available in the order confirmation page. 
+
+
+### Features Left to Implement
+
+- I would to like to add toasts to this project is order to show messages everytime the user performes an action. Messages can be thoughout the different code files in the project waiting to be displayed once toasts are implemented.
+
 
 
 ### Languages Used
