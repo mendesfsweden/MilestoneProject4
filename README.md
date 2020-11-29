@@ -16,7 +16,7 @@ The business/store owner can access, archive, edit or add products to the databa
 note: in order to make a purchase, users have to be registered and logged in.
 
 "As a user, I would like to, ___________"
-(all the following item have been succefully implemented)
+ (all the following items have been succefully implemented)
 
 - view the website from any device (mobile, desktop, tablet)
 - be able to see a list of all products as a non registered user as well as detailed information about each one.
