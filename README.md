@@ -82,7 +82,7 @@ In order to filter products by category, there is a select box to the left of th
 
 ### Features Left to Implement
 
-- I would to like to add toasts to this project is order to show messages everytime the user performes an action. Messages can be thoughout the different code files in the project waiting to be displayed once toasts are implemented.
+- I would to like to add toasts to this project in order to show messages everytime the user performes an action. Messages can be found throughout the different code files in the project waiting to be displayed once toasts are implemented.
 
 ## Technologies Used
 
