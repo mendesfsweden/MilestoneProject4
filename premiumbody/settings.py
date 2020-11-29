@@ -151,6 +151,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+ACCOUNT_SESSION_REMEMBER = False
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
