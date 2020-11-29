@@ -107,11 +107,11 @@
     <h3 class="main-font section-title text-center pt-3 pb-3">What our customers say</h3>
     <div class="row">
         {% for review in reviews %}
-        <div class="col-12 col-md-3 mb-3">
+        <div class="col-12 col-md-4 mb-4">
             <div class="card border-0 mt-3 mb-3 review">
                 <div class="card-body">
                     <p class="card-text username-review font-weight-bold">{% if review.user_profile.full_name %} {{ review.user_profile.full_name }} {% else %} {{ review.user_profile.user.username }} {% endif %}</p>
-                    <p class="card-text"><small>{{ review.text }}</small></p>
+                    <p class="card-text"><small>"{{ review.text }}"</small></p>
                 </div>
             </div>
         </div>
