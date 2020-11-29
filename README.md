@@ -21,7 +21,7 @@ note: in order to make a purchase, users have to be registered and logged in.
 - view the website from any device (mobile, desktop, tablet)
 - be able to see a list of all products as a non registered user as well as detailed information about each one.
 - filter the products by category.
-- sort the products by price (High to Low, Low to High) and rating (High to Low, Low to High).
+- sort the products by price and rating (ascending and descending order).
 - be able create my own profile.
 - be able to login and logout.
 - be able to search for products by name or keyword.
