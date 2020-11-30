@@ -4,12 +4,14 @@
 
 [Click here for a live demo version of this project.](https://premiumbody.herokuapp.com/)
 
-This project is a sports nutrition supplements e-commerce web application. The main goal is to allow users to register a profile and purchase the products avaiable.
-The business/store owner can access, archive, edit or add products to the database through the Admin interface. 
+Your Protein is finishing and you feel like you need a Pre Workout to get a "kick" while you are at the gym but you don't want to leave the comfort of your home? I understand! That is why we created PREMIUMBODY Sports Nutrition online store. We will ship whatever you need to wherever you are in the world and, because we really want you to get all you need, we even pay the delivery for you as long as you promise to spend at least 50€. If go over 100€ you will get a PROMO CODE to use the next time you running out of supplements. Welcome to PREMIUMBODY  
 
 <img src="media/mockup_demo_image.png" width="1000" height="400">
 
 ## User Experience (UX)
+
+This project is a sports nutrition supplements e-commerce web application. The main goal is to allow users to register a profile and purchase the products avaiable.
+The business/store owner can access, archive, edit or add products to the database through the Admin interface. 
 
 ### User Stories
 
@@ -79,10 +81,21 @@ In order to filter products by category, there is a select box to the left of th
 #### Review
 - Users can leave a review once the finalize their purchase. A comment box will be available in the order confirmation page. 
 
+#### Admin Superuser ####
 
+The admin interface can be reached by adding /admin at the end of the premiumbody url
+
+- An Admin/Superuser can, on the admin interface:
+    - View the list of categories and products as well as adding, editing or deleting them.
+    - Edit, Delete and Add any product and its information.
+    - View the list of all the users as well as deleting them, if necessary.
+    - View the orders history and access all the information attached to it. From which user, date, amount, order number amongst other.
+ 
 ### Features Left to Implement
 
 - I would to like to add toasts to this project in order to show messages everytime the user performes an action. Messages can be found throughout the different code files in the project waiting to be displayed once toasts are implemented.
+- Develop an interface to the management so there will be no need to access the /admin url in order to perform management actions.
+- Add functionality that allows the management(admin/superuser) to just archive a product instead of deleting it.
 
 ## Technologies Used
 
@@ -106,7 +119,7 @@ In order to filter products by category, there is a select box to the left of th
 1. [Django:](https://www.djangoproject.com/)
     - Django was the framework used to build this project.
 1. [jQuery:](https://jquery.com/)
-    - jQuery was used to make certain Bootstrap components to function.
+    - jQuery was used to make certain Bootstrap components to function and to improve UX.
 1. [Bootstrap:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
     - Bootstrap was used to assist with the responsiveness and styling of the website.
 1. [PostgreSQL:](https://www.postgresql.org/)
@@ -123,7 +136,7 @@ In order to filter products by category, there is a select box to the left of th
 
 I've created my own personal account, along with the superuser account (/admin). Confirm authentication  worked as expected.
 
-### Creating an account
+### Logging in to an account
 
 Several attempts to Log In and Log Out were performed. Worked as expected.
 
@@ -134,15 +147,15 @@ Plenty of testing was done to ensure that each product can be added and remove f
 ### Pagination ###
 
 #### Pagination without Search ####
-- *Previous Page* button disabled on products first page.
-- *Next Page* button disabled on products last page.
+- Previous Page button disabled on products first page.
+- Next Page button disabled on products last page.
 - Appropriate number of pages appear based on the number of items per page(8).
 - Each page number returns their correct page URL.
 
 #### Pagination with Search ####
 - Search results match search parameters.
-- *Previous Page* button disabled on first page of search results.
-- *Next Page* button disabled on last page of search results.
+- Previous Page button disabled on first page of search results.
+- Next Page button disabled on last page of search results.
 - Each page number returns their correct page URL.
 
 ### Sort by Price or Rating and Filter by Category ###
@@ -164,15 +177,83 @@ Plenty of testing was done to ensure that each product can be added and remove f
 Several payments were performed and it always worked as expected.
 
 ### Other testing ###
-- The project was tested on the following browsers: Google Chrome, Microsoft Edge, Brave and Safari.
+- The project was tested on the following browsers: Google Chrome and Safari.
 - The project was tested on the following devices: MacBookAir, Huawei P30, Iphone XS and Ipad (list of bugs bellow).
 - Premiumbody was tested by friends and family to obtain User feedback, improve User Experience and detect any potencial issues.
 
 ### Know Bugs ###
 - The quantity input on the cart page is too big for small screens. It is not displayed properly and it is impossible to see the input number. 
-- Home page hero image is not rendered on Iphone nor Ipad.
+- Home page hero image is not rendered on Iphone nor Ipad
+- On mobile phones, once the page is loaded, the page content is often zoomed in.
 
-note: more testing should have been described here but due to the project deadline that was not possible.
+## Deployment
+
+### Deployment to Heroku
+
+This project was deployed to Heroku. Find the steps bellow:
+
+1. Go to Heroku webpage and create a new app
+2. Click on "Resources" tab and provision a new PostgreSQL database.
+3. In order to use PostgreSQL, both packages dj_database_url and psycopg2 have to be installed on Gitpod.
+4. Import dj_database_url into the project's settings.py to setup new database.
+5. Disable the default database(SQLite) in the project's settings.py and add the PostgreSQL database url stored in the variable DATABASE_URL(can be found by clicking on the "settings" tab followed by clicking on "reveal config vars") in order to connect to PostgreSQL.
+6. Run migrations (due to the use of PostreSQL) on Gitpod.
+
+$ python3 manage.py migrate
+
+7. Load data (Categories and Products JSON files in the "fixtures" folder).
+- Load categories first 
+
+$ python3 manage.py loaddata categories
+
+- Then load products
+
+$ python3 manage.py loaddata categories
+
+8.Create superuser:
+
+$ python3 manage.py createsuperuser 
+
+9. In the project's settings.py, re-enable the projec's default database(disabled in step number 5) and with an if statment make sure that when the app is running on Heroku the connection is made to PostgreSQL or otherwise to default database (SQLite).
+10. Install gunicorn package on Gitpod
+11. Create Procfile
+12. Set DISABLE_COLLECTSTATIC to 1 on Heroku (so heroku does not collect static files during deployment).
+
+$ heroku config:set DISABLE_COLLECTSTATIC=1 --app premiumbody
+
+13. Add ALLOWED_HOSTS variable(containing host name of the premiumbody app and the localhost) to project's settings.py file.
+14. Commit and Push to Github
+15. Since the app was created via the Heroku webpage, initializing heroku git remote is necessary before pushing to Heroku
+
+$ heroku git:remote -a premiumbody
+
+16. Push to Heroku
+
+$ git push heroku master
+
+17. Finally, enable automatic deployment to Heroku when pushing to Github by going to Heroku webpage, clicking on the "Deploy" tab and then on "Connect to Github" button. Search for the premiumbody repo and click on "Connect". Scroll down to the "Automatic deploys" section and click on "Enable Automatic Deploys"
+
+
+### Forking the GitHub Repository
+
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps:
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type "git clone", and then paste the URL you copied in Step 3.
+
+$ git clone https://github.com/mendesfsweden/MilestoneProject4
+
+7. Press Enter. Your local clone will be created.
 
 ## Credits
 
