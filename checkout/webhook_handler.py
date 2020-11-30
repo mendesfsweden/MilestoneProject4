@@ -14,7 +14,7 @@ import time
 
 def _send_confirmation_email(order):
     """Send the user a confirmation email"""
-    cust_email = order.email
+    cust_email = order.user_profile.user.email
     subject = render_to_string(
         'checkout/confirmation_emails/confirmation_email_subject.txt',
         {'order': order})
