@@ -24,7 +24,6 @@ def add_review(request):
 
     if not request.user.is_authenticated:
         return redirect(reverse('home'))
-    print('ola')
     profile = UserProfile.objects.get(user=request.user)
     review = Review(user_profile=profile, text=request.POST["text"])
     review.save()
