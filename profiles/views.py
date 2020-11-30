@@ -14,7 +14,7 @@ def profile(request):
             form.save()
 
     form = UserProfileForm(instance=profile)
-    orders = profile.orders.all()
+    orders = profile.orders.all().order_by('-date')
     promo_codes = Promo.objects.filter(user_profile=profile)
 
     template = 'profiles/profile.html'
