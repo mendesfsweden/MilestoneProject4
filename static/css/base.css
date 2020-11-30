@@ -54,9 +54,14 @@ body {
 }
 
 .products-title,
-.allauth-titles {
+.allauth-titles,
+.no-product {
     font-family: "Black Ops One", sans-serif;
     color: black;
+}
+
+.no-product {
+    font-size: 20px;
 }
 
 .pagination-txt {

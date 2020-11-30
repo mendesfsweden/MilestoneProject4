@@ -39,6 +39,7 @@ def all_products(request):
         'search_term': query,
         'order': order,
         'category': category,
+        'count': paginator.count,
     }
 
     return render(request, 'products/products.html', context)

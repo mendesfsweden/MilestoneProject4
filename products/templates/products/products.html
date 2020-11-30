@@ -30,7 +30,11 @@
                     </div>
                 </div>
             </form>
+            {% if count == 0 %}
+                <p class="no-product text-center text-uppercase">No products found!</p>
+            {% endif %}
         </div>
+        {% if count > 0 %}
         <div class="row selector-wrapper">
             <select id="categories-selector" class="rounded-0 border mb-1">
                 <option value="no-category" {% if  not category %}selected{% endif %}>Category...</option>
@@ -47,7 +51,9 @@
                 <option value="rating_desc" {% if order == '-rating' %}selected{% endif %}>Rating (high to low)</option>
             </select>
         </div>
+        {% endif %}
     </div>
+    {% if count > 0%}
     <div class="container">    
         <div class="row">
             <div class="col-12">
@@ -141,7 +147,8 @@
             {% endif %}
         </span>
     </div>
-
+  
+    {% endif %}
 {% endblock %}
 
 {% block postloadjs %}
