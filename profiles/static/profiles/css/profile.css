@@ -28,3 +28,8 @@
     max-height: 360px;
     overflow-y: auto;
 }
+
+.order-history {
+    max-height: 300px; /* height of profile form + submit button */
+    overflow-y: auto;
+}

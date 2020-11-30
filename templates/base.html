@@ -41,7 +41,7 @@
             </div>            
         </div>
         <div class="row bg-header">
-            <div class="col-12 col-md-4 my-auto py-1 text-center text-lg-left">
+            <div class="col-12 col-lg-4 my-auto py-1 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="logo-font logo text-uppercase pt-3">
                  Premiumbody
                 </a>
@@ -49,7 +49,7 @@
                 {% include 'includes/desktop-nav.html' %}
                 {% include 'includes/mobile-nav.html' %}
             {% if request.user.is_authenticated %}
-                <div class="col-6 col-md-4 my-auto text-right">
+                <div class="col-6 col-lg-4 my-auto text-right">
                     <a href="{% url 'view_cart' %}" class="main-font nav-itm">
                         Cart 
                         <span class="badge badge-dark badge-pill main-font nav-itm">

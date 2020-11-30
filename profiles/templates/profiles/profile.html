@@ -35,7 +35,7 @@
             <div class="col-12 col-lg-6">
                 <legend>Promo Codes</legend>
                 {% if not promo_codes or promo_codes|length == 0 %}
-                    <span>No Promo Codes yet</span>
+                    <p class="font-weight-bold">No Promo Codes yet!</p>
                 {% else %}
                     <div class="promo-codes table-responsive rounded">
                         <table class="table table-sm table-borderless">
@@ -69,7 +69,10 @@
         <div class="row">
             <div class="col">
                 <legend>Order History</legend>
-                <div class="table-responsive rounded">
+                {% if not orders or orders|length == 0 %}
+                    <p class="font-weight-bold mb-3">You have not placed your first order yet!</p>
+                {% else %}
+                <div class="order-history table-responsive rounded mb-3">
                     <table class="table table-sm table-borderless">
                         <thead class="border-bottom">
                             <tr>
@@ -104,6 +107,7 @@
                         </tbody>
                     </table>
                 </div>
+                {% endif %}
             </div>
         </div>
     </div>
