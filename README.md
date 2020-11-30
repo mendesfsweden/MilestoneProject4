@@ -4,7 +4,7 @@
 
 [Click here for a live demo version of this project.](https://premiumbody.herokuapp.com/)
 
-Your protein is finishing and you feel like you need a Pre Workout to get a "kick" while you are at the gym but you don't want to leave the comfort of your home? I understand! That is why we created PREMIUMBODY Sports Nutrition online store. We will ship whatever you need to wherever you are in the world and, because we really want you to get all you need, we even pay the delivery for you as long as you promise to spend at least 50€. If go over 100€ you will get a PROMO CODE to use the next time you running out of supplements. Welcome to PREMIUMBODY  
+Your Protein is finishing and you feel like you need a Pre Workout to get a "kick" while you are at the gym but you don't want to leave the comfort of your home? I understand! That is why we created PREMIUMBODY Sports Nutrition online store. We will ship whatever you need to wherever you are in the world and, because we really want you to get all you need, we even pay the delivery for you as long as you promise to spend at least 50€. If go over 100€ you will get a PROMO CODE to use the next time you running out of supplements. Welcome to PREMIUMBODY  
 
 <img src="media/mockup_demo_image.png" width="1000" height="400">
 
