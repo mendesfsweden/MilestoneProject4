@@ -119,7 +119,7 @@ The admin interface can be reached by adding /admin at the end of the premiumbod
 1. [Django:](https://www.djangoproject.com/)
     - Django was the framework used to build this project.
 1. [jQuery:](https://jquery.com/)
-    - jQuery was used to make certain Bootstrap components to function.
+    - jQuery was used to make certain Bootstrap components to function and to improve UX.
 1. [Bootstrap:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
     - Bootstrap was used to assist with the responsiveness and styling of the website.
 1. [PostgreSQL:](https://www.postgresql.org/)
