@@ -185,6 +185,7 @@ Several payments were performed and it always worked as expected.
 - The quantity input on the cart page is too big for small screens. It is not displayed properly and it is impossible to see the input number. 
 - Home page hero image is not rendered on Iphone nor Ipad
 - On mobile phones, once the page is loaded, the page content is often zoomed in.
+- On mobile phones, in the shopping cart page, the table does not fit in the screen completly. Needs to be adjusted manually.
 
 ## Deployment
 
