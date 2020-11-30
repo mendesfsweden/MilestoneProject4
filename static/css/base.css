@@ -8,29 +8,6 @@ body {
     font-family: "Assistant", sans-serif;
 }
 
-.container-home {
-    background: url('/media/Home_image.jpg') no-repeat center center fixed;
-    height: 600px;
-}
-
-.container-main {
-    padding-top: 40px;
-}
-
-.selector-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-}
-
-.review-box {
-    border: 2px black solid;
-}
-
-.footer {
-    min-height:50px;
-}
-
 .logo-font,
 .main-font,
 .start-shop-btn,
@@ -39,9 +16,52 @@ body {
     color: white;
 }
 
-.cart-font {
+.products-title,
+.allauth-titles,
+.no-product {
+    font-family: "Black Ops One", sans-serif;
+    color: black;
+}
+
+.section-title {
+    color: black;
+}
+
+/* -------------------------------- base.html */
+
+.delivery-banner {
+    background: #C0B01F;
+}
+
+.delivery-banner-txt {
+    font-family: "Black Ops One", sans-serif;
+    color: black;
+    font-size: 16px;
+}
+
+.logo-font {
+    font-size: 26px;
+    color: #C0B01F;
+}
+
+/* -------------------------------- Products.html */
+
+.selector-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.no-product {
+    font-size: 20px;
+}
+
+.pagination-txt {
+    color: black;
     font-family: "Black Ops One", sans-serif;
 }
+
+/*---------------------------- Navbar*/
 
 .dropdown-itm {
     font-family: "Black Ops One", sans-serif;
@@ -53,20 +73,34 @@ body {
     font-size: 13px;
 }
 
-.products-title,
-.allauth-titles,
-.no-product {
-    font-family: "Black Ops One", sans-serif;
+/*---------------------------- Containers*/
+
+.container-home {
+    background: url('/media/Home_image.jpg') no-repeat center center fixed;
+    height: 600px;
+}
+
+.container-main {
+    padding-top: 40px;
+}
+
+.header-container {
+    padding-top: 80px;
+}
+
+.bg-header {
+    background-color: black;
+}
+
+/* -------------------------------- Buttons */
+
+.page-btn {
     color: black;
 }
 
-.no-product {
-    font-size: 20px;
-}
-
-.pagination-txt {
-    color: black;
+.cat-btn {
     font-family: "Black Ops One", sans-serif;
+    border: 2px solid black;
 }
 
 .start-shop-btn {
@@ -100,30 +134,10 @@ body {
     border: none;
 }
 
-.page-btn {
-    color: black;
-}
+/* -------------------------------- Footer */
 
-.cat-btn {
-    font-family: "Black Ops One", sans-serif;
-    border: 2px solid black;
-}
-
-.section-title {
-    color: black;
-}
-
-.logo-font {
-    font-size: 26px;
-    color: #C0B01F;
-}
-
-.header-container {
-    padding-top: 80px;
-}
-
-.bg-header {
-    background-color: black;
+.footer {
+    min-height:50px;
 }
 
 .social-media {
@@ -142,15 +156,7 @@ body {
     font-size: 15px;
 }
 
-.delivery-banner {
-    background: #C0B01F;
-}
-
-.delivery-banner-txt {
-    font-family: "Black Ops One", sans-serif;
-    color: black;
-    font-size: 16px;
-}
+/* -------------------------------- Hovers */
 
 a:hover {
     text-decoration: none;
@@ -240,7 +246,11 @@ input[type=number] {
     color: white;
 }
 
-/* Image cart template */
+/*-------------------- Cart */
+
+.cart-font {
+    font-family: "Black Ops One", sans-serif;
+}
 
 .image-container {
     width:75px; 
@@ -254,7 +264,7 @@ input[type=number] {
     max-height: 100%;
 }
 
-/* Modal -- .productsapp*/
+/*-------------------------------- Modal*/
 
 .close-modal {
     color: #C0B01F;
@@ -268,7 +278,7 @@ input[type=number] {
 	color: #17a2b8; 
 }
 
-/* Home - reviews*/
+/*------------------------------- Reviews*/
 
 .review {
     background-color: black;
@@ -277,4 +287,8 @@ input[type=number] {
 
 .username-review {
     color: #C0B01F;
+}
+
+.review-box {
+    border: 2px black solid;
 }
