@@ -81,11 +81,21 @@ In order to filter products by category, there is a select box to the left of th
 #### Review
 - Users can leave a review once the finalize their purchase. A comment box will be available in the order confirmation page. 
 
+#### Admin Superuser ####
 
+The admin interface can be reached by adding /admin at the end of the premiumbody url
+
+- An Admin/Superuser can, on the admin interface:
+    - View the list of categories and products as well as adding, editing or deleting them.
+    - Edit, Delete and Add any product and its information.
+    - View the list of all the users as well as deleting them, if necessary.
+    - View the orders history and access all the information attached to it. From which user, date, amount, order number amongst other.
+ 
 ### Features Left to Implement
 
 - I would to like to add toasts to this project in order to show messages everytime the user performes an action. Messages can be found throughout the different code files in the project waiting to be displayed once toasts are implemented.
 - Develop an interface to the management so there will be no need to access the /admin url in order to perform management actions.
+- Add functionality that allows the management(admin/superuser) to just archive a product instead of deleting it.
 
 ## Technologies Used
 
@@ -167,13 +177,14 @@ Plenty of testing was done to ensure that each product can be added and remove f
 Several payments were performed and it always worked as expected.
 
 ### Other testing ###
-- The project was tested on the following browsers: Google Chrome, Microsoft Edge, Brave and Safari.
+- The project was tested on the following browsers: Google Chrome and Safari.
 - The project was tested on the following devices: MacBookAir, Huawei P30, Iphone XS and Ipad (list of bugs bellow).
 - Premiumbody was tested by friends and family to obtain User feedback, improve User Experience and detect any potencial issues.
 
 ### Know Bugs ###
 - The quantity input on the cart page is too big for small screens. It is not displayed properly and it is impossible to see the input number. 
-- Home page hero image is not rendered on Iphone nor Ipad.
+- Home page hero image is not rendered on Iphone nor Ipad
+- On mobile phones, once the page is loaded, the page content is often zoomed in.
 
 ## Deployment
 
