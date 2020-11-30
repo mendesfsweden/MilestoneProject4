@@ -146,24 +146,21 @@
 
 {% block postloadjs %}
 <script type="text/javascript">
-    document.getElementById('sort-selector')
-    .addEventListener('change', ev => {
-        const orderBy = ev.target.value
-        const url = new URL(window.location)
-        url.searchParams.set('order_by', orderBy)
-        window.location.replace(url)
-    })
+    $('#sort-selector')
+        .change(ev => {
+            const orderBy = ev.target.value
+            const url = new URL(window.location)
+            url.searchParams.set('order_by', orderBy)
+            window.location.replace(url)
+        })
 
-    document.getElementById('categories-selector')
-    .addEventListener('change', ev => {
-        const category = ev.target.value
-        const url = new URL(window.location)
-        if (category === 'no-category'){
-            url.searchParams.delete('category')
-        } else {
-            url.searchParams.set('category', category)
-        }
-        window.location.replace(url)
-    })
+    $('#categories-selector')
+        .change(ev => {
+            const category = ev.target.value
+            const url = new URL(window.location)
+            if (category === 'no-category') url.searchParams.delete('category')
+            else url.searchParams.set('category', category)
+            window.location.replace(url)
+        })
 </script>
 {% endblock %}

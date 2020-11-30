@@ -90,26 +90,26 @@
 
 {% block postloadjs %}
 <script type="text/javascript">
-    const decBtn = document.getElementById('dec-btn')
-    const incBtn = document.getElementById('inc-btn')
-    const qtyInput = document.getElementById('qty')
-    
-    decBtn.addEventListener('click', ev => {
+    const decBtn = $('#dec-btn')
+    const incBtn = $('#inc-btn')
+    const qtyInput = $('#qty')
+
+    decBtn.click(ev => {
         ev.preventDefault()
-        if(qtyInput.value > 1) {
-            qtyInput.value -= 1
-            incBtn.disabled = false
-            if(qtyInput.value == 1)
-                decBtn.disabled = true
+        if(qtyInput.val() > 1) {
+            qtyInput.val(qtyInput.val() - 1)
+            incBtn.prop('disabled', false)
+            if(qtyInput.val() == 1)
+                decBtn.prop('disabled', true)
         }    
     })
-    incBtn.addEventListener('click', ev => {
+    incBtn.click(ev => {
         ev.preventDefault()
-        if(qtyInput.value < 99) {
-            qtyInput.value = Number(qtyInput.value) + 1
-            decBtn.disabled = false
-            if(qtyInput.value == 99)
-                incBtn.disabled = true
+        if(qtyInput.val() < 99) {
+            qtyInput.val(Number(qtyInput.val()) + 1)
+            decBtn.prop('disabled', false)
+            if(qtyInput.val() == 99)
+                incBtn.prop('disabled', true)
         }
     })
 </script>
