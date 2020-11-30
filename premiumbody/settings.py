@@ -151,6 +151,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Allauth remember checkbox
 ACCOUNT_SESSION_REMEMBER = False
 
 # Internationalization

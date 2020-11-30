@@ -38,6 +38,18 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
+    profile = UserProfile.objects.get(user=request.user)
+    params = request.GET if request.method == 'GET' else request.POST
+    promo_code = params.get('promo-code')
+    promo = None
+    if promo_code:
+        try:
+            promo = Promo.objects.get(user_profile=profile,
+                                      promo_code=promo_code,
+                                      promo_used=False)
+        except:
+            pass
+
     if request.method == 'POST':
         cart = request.session.get('cart', {})
 
@@ -76,7 +88,12 @@ def checkout(request):
                     )
                     order.delete()
                     return redirect(reverse('view_cart'))
-
+            if promo and order.order_total > PROMO_CODE_VALUE:
+                order.promo_code = promo.promo_code
+                order.grand_total -= PROMO_CODE_VALUE
+                promo.promo_used = True
+                promo.save()
+                order.save()
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success',
                                     args=[order.order_number]))
@@ -100,33 +117,32 @@ def checkout(request):
         currency=settings.STRIPE_CURRENCY,
     )
 
-    if request.user.is_authenticated:
-        try:
-            profile = UserProfile.objects.get(user=request.user)
-            order_form = OrderForm(initial={
-                'full_name': profile.full_name,
-                'email': profile.user.email,
-                'phone_number': profile.default_phone_number,
-                'country': profile.default_country,
-                'postcode': profile.default_postcode,
-                'city': profile.default_city,
-                'street_address1': profile.default_street_address1,
-                'street_address2': profile.default_street_address2,
-            })
-        except UserProfile.DoesNotExist:
-            order_form = OrderForm()
-    else:
-        order_form = OrderForm()
+    order_form = OrderForm(initial={
+        'full_name': profile.full_name,
+        'email': profile.user.email,
+        'phone_number': profile.default_phone_number,
+        'country': profile.default_country,
+        'postcode': profile.default_postcode,
+        'city': profile.default_city,
+        'street_address1': profile.default_street_address1,
+        'street_address2': profile.default_street_address2,
+    })
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
             Did you forget to set it in your environment?')
+
+    if promo and current_cart['total'] > PROMO_CODE_VALUE:
+        current_cart['grand_total'] -= PROMO_CODE_VALUE
 
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+        'PROMO_CODE_VALUE': PROMO_CODE_VALUE,
+        'promo': promo,
+        **current_cart
         }
 
     return render(request, template, context)
@@ -142,11 +158,9 @@ def checkout_success(request, order_number):
     profile = UserProfile.objects.get(user=request.user)
     # Attach the user's profile to the order
     order.user_profile = profile
-    order.promo_code = generate_promo_code(order.user_profile,
-                                           order.grand_total)
+    if order.promo_code == '':
+        generate_promo_code(order.user_profile, order.grand_total)
     order.save()
-
-
 
     # Save the user's info
     if save_info:
@@ -170,18 +184,17 @@ def checkout_success(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+        'PROMO_CODE_VALUE': PROMO_CODE_VALUE,
     }
 
     return render(request, template, context)
 
 
 def generate_promo_code(user, order_total):
-    print(user, order_total)
     if order_total < PROMO_CODE_TRESHOLD:
         return None
     code = get_random_string()
     promo = Promo(user_profile=user, promo_code=code)
-    print(promo)
     promo.save()
     return code
 
