@@ -10,6 +10,9 @@ Your Protein is finishing and you feel like you need a Pre Workout to get a "kic
 
 ## User Experience (UX)
 
+This project is a sports nutrition supplements e-commerce web application. The main goal is to allow users to register a profile and purchase the products avaiable.
+The business/store owner can access, archive, edit or add products to the database through the Admin interface. 
+
 ### User Stories
 
 note: in order to make a purchase, users have to be registered and logged in.
