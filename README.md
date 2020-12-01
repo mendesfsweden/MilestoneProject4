@@ -96,6 +96,7 @@ The admin interface can be reached by adding /admin at the end of the premiumbod
 - I would to like to add toasts to this project in order to show messages everytime the user performes an action. Messages can be found throughout the different code files in the project waiting to be displayed once toasts are implemented.
 - Develop an interface to the management so there will be no need to access the /admin url in order to perform management actions.
 - Add functionality that allows the management(admin/superuser) to just archive a product instead of deleting it.
+- Add pagination to the order history and promo codes tables in the profiles page. Display 10 orders/promo codes per page.
 
 ## Technologies Used
 
