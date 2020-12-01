@@ -20,7 +20,7 @@
         <div class="col-12 col-lg-4 offset-lg-4 my-auto py-1 py-lg-0">
             <form method="GET" action="{% url 'products' %}">
                 <div class="input-group w-100">
-                    <input class="form-control mb-3" type="text" name="q" placeholder="What are looking for?">
+                    <input class="form-control mb-3" type="text" name="q" placeholder="What are you looking for?">
                     <div class="input-group-append">
                         <button class="form-control btn border border-black rounded-0" type="submit">
                             <span class="icon">
@@ -36,7 +36,7 @@
         </div>
         {% if count > 0 %}
         <div class="row selector-wrapper pl-3 pr-3">
-            <select id="categories-selector" class="rounded-0 border text-muted">
+            <select id="categories-selector" class="select-boxes">
                 <option value="no-category" {% if  not category %}selected{% endif %}>Category...</option>
                 <option value="protein" {% if category == 'protein' %}selected{% endif %}>Protein</option>
                 <option value="mass_gainers" {% if category == 'mass_gainers' %}selected{% endif %}>Mass Gainers</option>
@@ -44,7 +44,7 @@
                 <option value="creatine" {% if category == 'creatine' %}selected{% endif %}>Creatine</option>
                 <option value="pre_workout" {% if category == 'pre_workout' %}selected{% endif %}>Pre Workout</option>
             </select>
-            <select id="sort-selector" class="rounded-0 border text-muted">
+            <select id="sort-selector" class="select-boxes">
                 <option value="price_asc" {% if order == 'price' %}selected{% endif %}>Price (low to high)</option>
                 <option value="price_desc" {% if order == '-price' %}selected{% endif %}>Price (high to low)</option>
                 <option value="rating_asc" {% if order == 'rating' %}selected{% endif %}>Rating (low to high)</option>

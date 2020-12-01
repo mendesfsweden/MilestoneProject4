@@ -61,6 +61,19 @@ body {
     font-family: "Black Ops One", sans-serif;
 }
 
+
+.select-boxes {
+    border: 0;
+    border-bottom: 2px solid black;
+    padding: .25em;
+    margin-bottom: .50em;
+}
+
+.select-boxes:focus {
+    outline: 0;
+    border-bottom-color: #C0B01F;
+}
+
 /*---------------------------- Navbar*/
 
 .dropdown-itm {
