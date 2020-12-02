@@ -49,7 +49,7 @@ note: in order to make a purchase, users have to be registered and logged in.
     -   All the images are sports nutrition supplements related. If there is no image file/url  associated to the product a default image will be displayed instead.
 
 -   ### Wireframes
-    -   [View Mockups]() 
+    -   [View Mockups](https://github.com/mendesfsweden/MilestoneProject4/tree/master/media/mockups) There is only one mockup file for the checkout page since the layout on both mobile and desktop screens is the same.
 
 ## Features
 
