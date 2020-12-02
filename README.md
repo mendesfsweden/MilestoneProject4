@@ -186,14 +186,14 @@ Plenty of testing was done to ensure that each product can be added and remove f
 Several payments were performed and it always worked as expected.
 
 ### Other testing 
-- The project was tested on the following browsers: Google Chrome and Safari.
+- The project was tested on the following browsers: Google Chrome, Safari, Edge, Brave and Opera.
 - The project was tested on the following devices: MacBookAir, Huawei P30, Iphone XS and Ipad (list of bugs bellow).
 - Premiumbody was tested by friends and family to obtain User feedback, improve User Experience and detect any potencial issues.
 
 ### Know Bugs 
 - The quantity input on the cart page is too big for small screens. It is not displayed properly and it is impossible to see the input number. 
 - Home page hero image is not rendered on Iphone nor Ipad
-- On mobile phones, once the page is loaded, the page content is often zoomed in.
+- On mobile phones, once the page is loaded, the page content is often zoomed in. Needs to be adjusted manually or refresh page.
 - On mobile phones, in the shopping cart page, the table does not fit in the screen completly. Needs to be adjusted manually.
 
 ## Deployment
