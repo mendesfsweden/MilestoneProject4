@@ -81,7 +81,7 @@ In order to filter products by category, there is a select box to the left of th
 #### Review
 - Users can leave a review once the finalize their purchase. A comment box will be available in the order confirmation page. 
 
-#### Admin Superuser ####
+#### Admin Superuser
 
 The admin interface can be reached by adding /admin at the end of the premiumbody url
 
@@ -109,29 +109,37 @@ The admin interface can be reached by adding /admin at the end of the premiumbod
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Google Fonts:](https://fonts.google.com/)
+- [Google Fonts](https://fonts.google.com/)
     - "Black Ops One" and "Assistant" are the fonts used in this project, imported from Google Fonts.
-1. [Git](https://git-scm.com/)
+- [Git](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
-1. [GitHub:](https://github.com/)
+- [GitHub](https://github.com/)
     - GitHub is used to store the project's code after being pushed from Git.
-1. [Figma:](https://figma.com/)
+- [Figma](https://figma.com/)
     - Figma was used to create the wireframes for this project.
-1. [Django:](https://www.djangoproject.com/)
+- [Django](https://www.djangoproject.com/)
     - Django was the framework used to build this project.
-1. [jQuery:](https://jquery.com/)
+- [jQuery](https://jquery.com/)
     - jQuery was used to make certain Bootstrap components to function and to improve UX.
-1. [Bootstrap:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+- [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
     - Bootstrap was used to assist with the responsiveness and styling of the website.
-1. [PostgreSQL:](https://www.postgresql.org/)
+- [PostgreSQL](https://www.postgresql.org/)
     - PostgreSQL was the database service used to store the project's data.
-1. [Stripe:](https://stripe.com/)
+- [Stripe](https://stripe.com/)
     - Stripe was the online payment processing platform used in this project to process the card payments.
-1. [Amazon Web Services(AWS):](https://aws.amazon.com/)
+- [Amazon Web Services(AWS)](https://aws.amazon.com/)
     - Amazon Web Services (S3) was used to store the projects static and media files.
 
 
 ## Testing
+
+### Validators
+
+- [W3C HTML Validator](https://validator.w3.org) - [Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpremiumbody.herokuapp.com%2F)
+    - No errors were found after running the HTML Validator tests.
+- [W3C CSS Validator](http://jigsaw.w3.org/css-validator/) - [Results](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fpremiumbody.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+    - Two errors were found after running the CSS Validator but they were related to Bootstrap classes.
+    - Four warnings were also found. They are related to the base.css file. The warnings refer to the two different classes used to remove the Up & Down arrows in the input boxes.
 
 ### Creating an account
 
@@ -141,27 +149,27 @@ I've created my own personal account, along with the superuser account (/admin).
 
 Several attempts to Log In and Log Out were performed. Worked as expected.
 
-### Add | Remove a product from cart ###
+### Add | Remove a product from cart 
 
 Plenty of testing was done to ensure that each product can be added and remove from the cart. Works as expected. 
 
-### Pagination ###
+### Pagination 
 
-#### Pagination without Search ####
+#### Pagination without Search 
 - Previous Page button disabled on products first page.
 - Next Page button disabled on products last page.
 - Appropriate number of pages appear based on the number of items per page(8).
 - Each page number returns their correct page URL.
 
-#### Pagination with Search ####
+#### Pagination with Search 
 - Search results match search parameters.
 - Previous Page button disabled on first page of search results.
 - Next Page button disabled on last page of search results.
 - Each page number returns their correct page URL.
 
-### Sort by Price or Rating and Filter by Category ###
+### Sort by Price or Rating and Filter by Category 
 
-#### Sorting ####
+#### Sorting 
 - Sorting by "Price" works accordingly:
     - ascending (Low to High)
     - descending (High to Low)
@@ -169,20 +177,20 @@ Plenty of testing was done to ensure that each product can be added and remove f
     - ascending (lowest to highest)
     - descending (highest to lowest)
 
-#### Filter ####
+#### Filter 
 - Filter by Category works accordingly:
     - When selecting a particular category, only the products that belong to that category are displayed.
 
-### Payment ###
+### Payment 
 
 Several payments were performed and it always worked as expected.
 
-### Other testing ###
+### Other testing 
 - The project was tested on the following browsers: Google Chrome and Safari.
 - The project was tested on the following devices: MacBookAir, Huawei P30, Iphone XS and Ipad (list of bugs bellow).
 - Premiumbody was tested by friends and family to obtain User feedback, improve User Experience and detect any potencial issues.
 
-### Know Bugs ###
+### Know Bugs 
 - The quantity input on the cart page is too big for small screens. It is not displayed properly and it is impossible to see the input number. 
 - Home page hero image is not rendered on Iphone nor Ipad
 - On mobile phones, once the page is loaded, the page content is often zoomed in.
@@ -192,48 +200,62 @@ Several payments were performed and it always worked as expected.
 
 ### Deployment to Heroku
 
-This project was deployed to Heroku. Find the steps bellow:
+This project was deployed to [Heroku](https://www.heroku.com/). Find the steps bellow:
 
 1. Go to Heroku webpage and create a new app
-2. Click on "Resources" tab and provision a new PostgreSQL database.
-3. In order to use PostgreSQL, both packages dj_database_url and psycopg2 have to be installed on Gitpod.
-4. Import dj_database_url into the project's settings.py to setup new database.
-5. Disable the default database(SQLite) in the project's settings.py and add the PostgreSQL database url stored in the variable DATABASE_URL(can be found by clicking on the "settings" tab followed by clicking on "reveal config vars") in order to connect to PostgreSQL.
-6. Run migrations (due to the use of PostreSQL) on Gitpod.
+1. Click on "Resources" tab and provision a new PostgreSQL database.
+1. In order to use PostgreSQL, both packages `dj_database_url` and `psycopg2` have to be installed on Gitpod.
+1. Import `dj_database_url` into the project's [`settings.py`](/premiumbody/settings.py) to setup new database.
+1. Disable the default database(SQLite) in the project's [`settings.py`](/premiumbody/settings.py) and add the PostgreSQL database URL stored in the variable `DATABASE_URL`(can be found by clicking on the "settings" tab followed by clicking on "reveal config vars") in order to connect to PostgreSQL.
+1. Run migrations (due to the use of PostreSQL) on Gitpod.
 
-$ python3 manage.py migrate
+    ```
+    $ python3 manage.py migrate
+    ```
 
-7. Load data (Categories and Products JSON files in the "fixtures" folder).
+1. Load data (Categories and Products JSON files in the [`fixtures`](/products/fixtures) folder).
 - Load categories first 
 
-$ python3 manage.py loaddata categories
+    ```
+    $ python3 manage.py loaddata categories
+    ```
 
 - Then load products
 
-$ python3 manage.py loaddata categories
+    ```
+    $ python3 manage.py loaddata categories
+    ```
 
-8.Create superuser:
+1. Create superuser:
 
-$ python3 manage.py createsuperuser 
+    ```
+    $ python3 manage.py createsuperuser 
+    ```
 
-9. In the project's settings.py, re-enable the projec's default database(disabled in step number 5) and with an if statment make sure that when the app is running on Heroku the connection is made to PostgreSQL or otherwise to default database (SQLite).
-10. Install gunicorn package on Gitpod
-11. Create Procfile
-12. Set DISABLE_COLLECTSTATIC to 1 on Heroku (so heroku does not collect static files during deployment).
+1. In the project's [`settings.py`](/premiumbody/settings.py), re-enable the projec's default database(disabled in step number 5) and with an if statment make sure that when the app is running on Heroku the connection is made to PostgreSQL or otherwise to default database (SQLite).
+1. Install `gunicorn` package on Gitpod
+1. Create Procfile
+1. Set `DISABLE_COLLECTSTATIC` to `1` on Heroku (so heroku does not collect static files during deployment).
 
-$ heroku config:set DISABLE_COLLECTSTATIC=1 --app premiumbody
+    ```
+    $ heroku config:set DISABLE_COLLECTSTATIC=1 --app premiumbody
+    ```
 
-13. Add ALLOWED_HOSTS variable(containing host name of the premiumbody app and the localhost) to project's settings.py file.
-14. Commit and Push to Github
-15. Since the app was created via the Heroku webpage, initializing heroku git remote is necessary before pushing to Heroku
+1. Add `ALLOWED_HOSTS` variable(containing host name of the premiumbody app and the localhost) to project's [`settings.py`](/premiumbody/settings.py) file.
+1. Commit and Push to Github
+1. Since the app was created via the Heroku webpage, initializing heroku git remote is necessary before pushing to Heroku
 
-$ heroku git:remote -a premiumbody
+    ```
+    $ heroku git:remote -a premiumbody
+    ```
 
-16. Push to Heroku
+1. Push to Heroku
 
-$ git push heroku master
+    ```
+    $ git push heroku master
+    ```
 
-17. Finally, enable automatic deployment to Heroku when pushing to Github by going to Heroku webpage, clicking on the "Deploy" tab and then on "Connect to Github" button. Search for the premiumbody repo and click on "Connect". Scroll down to the "Automatic deploys" section and click on "Enable Automatic Deploys"
+1. Finally, enable automatic deployment to Heroku when pushing to Github by going to Heroku webpage, clicking on the "Deploy" tab and then on "Connect to Github" button. Search for the premiumbody repo and click on "Connect". Scroll down to the "Automatic deploys" section and click on "Enable Automatic Deploys"
 
 
 ### Forking the GitHub Repository
@@ -241,21 +263,25 @@ $ git push heroku master
 By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps:
 
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
+1. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+1. You should now have a copy of the original repository in your GitHub account.
 
 ### Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type "git clone", and then paste the URL you copied in Step 3.
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/mendesfsweden/MilestoneProject4)
+1. Under the repository name, click "Clone or download".
+1. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+1. Open Git Bash
+1. Change the current working directory to the location where you want the cloned directory to be made.
+1. Type "git clone", and then paste the URL you copied in Step 3.
 
-$ git clone https://github.com/mendesfsweden/MilestoneProject4
-
-7. Press Enter. Your local clone will be created.
+    ```
+    $ git clone https://github.com/mendesfsweden/MilestoneProject4
+    ```
+    
+ ### Amazon Services (S3)
+ 
+ After the deployment to Heroku, Amazon Web Services(AWS) - S3 was used to store all the media and static files in Premiumbody app. 
 
 ## Credits
 
