@@ -26,38 +26,43 @@
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
                             <thead class="border-bottom">
-                                <tr>
-                                    <th scope="col">Product Image</th>
-                                    <th scope="col">Product Info</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Qty</th>
-                                    <th scope="col">Subtotal</th>
-                                    <th scope="col">Action</th>
+                                <tr class="row">
+                                    <th class="text-center col-1" scope="col"></th>
+                                    <th class="col-2" scope="col"></th>
+                                    <th class="col-3" scope="col"></th>
+                                    <th class="text-center col-2 d-none d-md-block" scope="col">Qty</th>
+                                    <th class="text-center col-2 d-none d-md-block" scope="col">Price</th>                                   
+                                    <th class="text-center col-2 d-none d-md-block" scope="col">Subtotal</th>
                                 </tr>
                             </thead>
 
                             {% for item in cart_items %}
-                                <tr>
-                                    <td class="p-3 image-container">
+                                <tr class="row">
+                                    <td class="col-2 col-sm-1 text-right py-4">
+                                        <form class="form" action="{% url 'remove_from_cart' item.item_id %}" method="POST">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn-del-itm">
+                                                <i i class="fas fa-trash"></i>
+                                            </button>
+                                        </form>
+                                    </td>
+                                    <td class="col-5 col-sm-2 p-3 image-container text-center">
                                         <img class="prod-image" src="{{ item.product.image.url }}">
                                     </td>
-                                    <td class="py-3">
+                                    <td class="col-5 col-sm-3 py-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                         <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                     </td>
-                                    <td class="py-3">
-                                        <p class="my-0">€{{ item.product.price }}</p>
-                                    </td>
-                                    <td class="py-3">
+                                    <td class="col-4 col-sm-2 py-3">
                                             <form id="dec-form{{ item.item_id }}" method="POST" action="{% url 'decrement_cart_itm' item.item_id %}">
                                                 {% csrf_token %}
                                             </form>
                                             <form id="inc-form{{ item.item_id }}" method="POST" action="{% url 'add_to_cart' item.item_id %}">
                                                 {% csrf_token %}
                                             </form>
-                                        <div class="form-group w-50">
+                                        <div class="form-group">
                                             <div class="input-group">
-                                                <div class="input-group-prepend">
+                                                <div class="input-group-prepend ml-4">
                                                     <button class="btn qty-btn" 
                                                             id="dec-btn{{ item.item_id }}" form="dec-form{{ item.item_id }}" type="submit"
                                                             {% if item.quantity == 1 %}disabled{% endif %}>
@@ -66,7 +71,7 @@
                                                         </span>
                                                     </button>
                                                 </div>
-                                                <input class="form-control form-control-sm text-center" type="number"
+                                                <input class="text-center form-control form-control-sm" type="number"
                                                     name="quantity" value="{{ item.quantity }}" min="1" max="99" step="1"
                                                     id="id_qty_{{ item.item_id }}" readonly>
                                                 <div class="input-group-append">
@@ -81,16 +86,11 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="py-3">
-                                        <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                    <td class="col-4 col-md-2 text-center py-3">
+                                        <p class="my-0">€{{ item.product.price }}</p>
                                     </td>
-                                    <td class="py-3">
-                                        <form class="form" action="{% url 'remove_from_cart' item.item_id %}" method="POST">
-                                            {% csrf_token %}
-                                            <button type="submit" class="btn-del-itm">
-                                                <i class="fas fa-times text-danger"></i>
-                                            </button>
-                                        </form>
+                                    <td class="col-4 col-md-2 text-center py-3">
+                                        <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
